@@ -31,7 +31,7 @@ export default function Home() {
       canvas.height = window.innerHeight;
 
       const frameCount = 885;
-      const currentFrame = (index: number) => `/hero-frames/frame_${(index + 1).toString().padStart(4, '0')}.jpg`;
+      const currentFrame = (index: number) => `/hero-frames/frame_${(index + 1).toString().padStart(4, '0')}.webp`;
 
       const images: HTMLImageElement[] = [];
       const seq = { frame: 0 };
@@ -219,18 +219,18 @@ export default function Home() {
         <div className="products-track flex h-[60vh] w-[200vw] mt-32 md:mt-40 items-center pl-8 md:pl-12 gap-8 md:gap-16">
           
           {[
-            { cat: "School", title: "Boys Shirts & Shorts", img: "/images/products/boys_school_uniform_1789839759243.jpg" },
-            { cat: "School", title: "Girls Pinafores", img: "/images/products/girls_school_pinafore_1789839775913.jpg" },
-            { cat: "School", title: "Sports Track Pants", img: "/images/products/school_sports_trackpants_1789839789307.jpg" },
-            { cat: "School", title: "Winter Waist Coats", img: "/images/products/new_winter_waistcoat.jpg" },
-            { cat: "Healthcare", title: "Doctor Lab Coats", img: "/images/products/hospital_doctor_coat_1789887508441.jpg" },
-            { cat: "Healthcare", title: "V-Neck Scrub Sets", img: "/images/products/hospital_vneck_scrub_1789887522110.jpg" },
-            { cat: "Healthcare", title: "Nurse Tunics", img: "/images/products/hospital_tunics_pants_1789887565362.jpg" },
-            { cat: "Healthcare", title: "OT Surgical Wear", img: "/images/products/hospital_ward_boy_1789887617894.jpg" },
-            { cat: "Work Wear", title: "Formal Trousers", img: "/images/products/corporate_formal_trousers_1789840370513.jpg" },
-            { cat: "Work Wear", title: "Corporate Polo Tees", img: "/images/products/corporate_polo_tees_1789840388961.jpg" },
-            { cat: "Work Wear", title: "Executive Shirts", img: "/images/products/hospital_attender_1789887603892.jpg" },
-            { cat: "Work Wear", title: "Industrial Overalls", img: "/images/products/hospital_housekeeping_1789887631446.jpg" }
+            { cat: "School", title: "Boys Shirts & Shorts", img: "/images/products/boys_school_uniform_1789839759243.webp" },
+            { cat: "School", title: "Girls Pinafores", img: "/images/products/girls_school_pinafore_1789839775913.webp" },
+            { cat: "School", title: "Sports Track Pants", img: "/images/products/school_sports_trackpants_1789839789307.webp" },
+            { cat: "School", title: "Winter Waist Coats", img: "/images/products/new_winter_waistcoat.webp" },
+            { cat: "Healthcare", title: "Doctor Lab Coats", img: "/images/products/hospital_doctor_coat_1789887508441.webp" },
+            { cat: "Healthcare", title: "V-Neck Scrub Sets", img: "/images/products/hospital_vneck_scrub_1789887522110.webp" },
+            { cat: "Healthcare", title: "Nurse Tunics", img: "/images/products/hospital_tunics_pants_1789887565362.webp" },
+            { cat: "Healthcare", title: "OT Surgical Wear", img: "/images/products/hospital_ward_boy_1789887617894.webp" },
+            { cat: "Work Wear", title: "Formal Trousers", img: "/images/products/corporate_formal_trousers_1789840370513.webp" },
+            { cat: "Work Wear", title: "Corporate Polo Tees", img: "/images/products/corporate_polo_tees_1789840388961.webp" },
+            { cat: "Work Wear", title: "Executive Shirts", img: "/images/products/hospital_attender_1789887603892.webp" },
+            { cat: "Work Wear", title: "Industrial Overalls", img: "/images/products/hospital_housekeeping_1789887631446.webp" }
           ].map((prod, idx) => (
             <div key={idx} className="w-[70vw] md:w-[35vw] h-full flex flex-col shrink-0 group">
               <div className="w-full h-[85%] mb-6 flex items-center justify-center overflow-hidden relative border border-black/10 shadow-xl bg-black">
@@ -287,7 +287,7 @@ export default function Home() {
           
           <div className="relative h-[80vh] w-full overflow-hidden bg-gray-200">
              <div className="split-image absolute -inset-y-[20%] inset-x-0 w-full h-[140%] bg-[var(--color-fmrg-text)] flex items-center justify-center overflow-hidden">
-                <img src="/images/media_1789212528658.png" className="w-full h-full object-cover opacity-80" alt="Cinematic presentation" />
+                <img src="/images/media_1789212528658.webp" className="w-full h-full object-cover opacity-80" alt="Cinematic presentation" />
              </div>
           </div>
 

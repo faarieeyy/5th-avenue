@@ -81,61 +81,61 @@ export default function HealthcareUniforms() {
       title: "Doctor Coats", 
       desc: "Immaculately tailored doctor coats engineered for comfort during long shifts, featuring an anti-microbial finish and deep utility pockets.",
       quote: "Pristine armor for the frontlines of care.",
-      img: "/images/products/hospital_doctor_coat_1789887508441.jpg" 
+      img: "/images/products/hospital_doctor_coat_1789887508441.webp" 
     },
     { 
       title: "V-Neck Scrubs", 
       desc: "Designed for those who never stop moving. These scrub sets use a lightweight, fluid-resistant fabric that breathes and stretches effortlessly.",
       quote: "Fluid-resistant comfort for relentless shifts.",
-      img: "/images/products/hospital_vneck_scrub_1789887522110.jpg" 
+      img: "/images/products/hospital_vneck_scrub_1789887522110.webp" 
     },
     { 
       title: "Lab Coats", 
       desc: "Crisp white tailoring for laboratory professionals, offering protection and precision with reinforced seams and smart styling.",
       quote: "Precision tailoring for meticulous work.",
-      img: "/images/products/hospital_lab_coat_1789887534891.jpg" 
+      img: "/images/products/hospital_lab_coat_1789887534891.webp" 
     },
     { 
       title: "Nurse Uniforms", 
       desc: "Professional and caring appearance meets extreme mobility. Our nurse uniforms blend soft-touch fabrics with highly functional designs.",
       quote: "Empowering mobility without compromising elegance.",
-      img: "/images/products/hospital_nurse_uniform_1789887551064.jpg" 
+      img: "/images/products/hospital_nurse_uniform_1789887551064.webp" 
     },
     { 
       title: "Tunics & Pants", 
       desc: "Elegant yet practical tunic sets offering superior comfort and a distinguished look for senior nursing staff and specialists.",
       quote: "Sophisticated styling for modern healthcare.",
-      img: "/images/products/hospital_tunics_pants_1789887565362.jpg" 
+      img: "/images/products/hospital_tunics_pants_1789887565362.webp" 
     },
     { 
       title: "Attender Uniforms", 
       desc: "Neat and professional attender uniforms designed to withstand rigorous daily wear while maintaining a sharp appearance.",
       quote: "Durable presentation for everyday support.",
-      img: "/images/products/hospital_attender_1789887603892.jpg" 
+      img: "/images/products/hospital_attender_1789887603892.webp" 
     },
     { 
       title: "Ward Boy Uniforms", 
       desc: "Practical and comfortable sets in calming tones, providing high utility and ease of movement for ward assistants.",
       quote: "High utility for essential assistance.",
-      img: "/images/products/hospital_ward_boy_1789887617894.jpg" 
+      img: "/images/products/hospital_ward_boy_1789887617894.webp" 
     },
     { 
       title: "Housekeeping", 
       desc: "Highly functional cleaning uniforms that don't sacrifice elegance. Made from easy-care, stain-release fabrics.",
       quote: "Functional elegance for facility care.",
-      img: "/images/products/hospital_housekeeping_1789887631446.jpg" 
+      img: "/images/products/hospital_housekeeping_1789887631446.webp" 
     },
     { 
       title: "Staff Shirt & Pant", 
       desc: "Clean lines and professional styling for hospital administration and support staff. Lightweight and breathable for all-day comfort.",
       quote: "Professional attire for healthcare administration.",
-      img: "/images/products/corporate_formal_trousers_1789840370513.jpg" 
+      img: "/images/products/corporate_formal_trousers_1789840370513.webp" 
     },
     { 
       title: "Front Office Suites", 
       desc: "Sophisticated corporate healthcare attire ensuring your front desk team makes a lasting, premium first impression.",
       quote: "A distinguished welcome for every patient.",
-      img: "/images/products/new_winter_waistcoat.jpg" 
+      img: "/images/products/new_winter_waistcoat.webp" 
     }
   ];
 
@@ -147,9 +147,9 @@ export default function HealthcareUniforms() {
         
         {/* Floating Editorial Images */}
         <div className="absolute inset-0 w-full h-full pointer-events-none">
-          <img src="/images/products/hospital_doctor_coat_1789887508441.jpg" className="parallax-img absolute top-[15%] left-[5%] w-48 md:w-80 aspect-[3/4] object-cover opacity-90 shadow-2xl" data-speed="1.1" />
-          <img src="/images/products/hospital_vneck_scrub_1789887522110.jpg" className="parallax-img absolute top-[45%] right-[8%] w-56 md:w-96 aspect-[3/4] object-cover opacity-90 shadow-2xl" data-speed="0.7" />
-          <img src="/images/products/hospital_tunics_pants_1789887565362.jpg" className="parallax-img absolute top-[70%] left-[25%] w-64 md:w-[28rem] aspect-[3/4] object-cover opacity-90 shadow-2xl" data-speed="1.4" />
+          <img src="/images/products/hospital_doctor_coat_1789887508441.webp" className="parallax-img absolute top-[15%] left-[5%] w-48 md:w-80 aspect-[3/4] object-cover opacity-90 shadow-2xl" data-speed="1.1" />
+          <img src="/images/products/hospital_vneck_scrub_1789887522110.webp" className="parallax-img absolute top-[45%] right-[8%] w-56 md:w-96 aspect-[3/4] object-cover opacity-90 shadow-2xl" data-speed="0.7" />
+          <img src="/images/products/hospital_tunics_pants_1789887565362.webp" className="parallax-img absolute top-[70%] left-[25%] w-64 md:w-[28rem] aspect-[3/4] object-cover opacity-90 shadow-2xl" data-speed="1.4" />
         </div>
 
         {/* Massive Typography */}

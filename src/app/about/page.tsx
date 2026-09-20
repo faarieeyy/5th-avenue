@@ -70,7 +70,7 @@ export default function About() {
            <div className="max-w-[100rem] w-full grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
               
               <div className="w-full h-[60vh] overflow-hidden bg-black border border-gray-800">
-                 <img src="/images/media_1789212503069.png" alt="Manufacturing" className="w-full h-full object-cover opacity-60 mix-blend-luminosity" />
+                 <img src="/images/media_1789212503069.webp" alt="Manufacturing" className="w-full h-full object-cover opacity-60 mix-blend-luminosity" />
               </div>
 
               <div className="flex flex-col gap-12">

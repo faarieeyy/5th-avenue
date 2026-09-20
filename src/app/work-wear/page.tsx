@@ -80,31 +80,31 @@ export default function WorkWear() {
       title: "Men's Formal Shirts & Trousers", 
       desc: "Designed for the modern professional, our formal shirts and trousers are crafted from wrinkle-free blends that guarantee a sharp, corporate silhouette all day long.",
       quote: "Flawless structure for the corporate arena.",
-      img: "/images/products/corporate_formal_trousers_1789840370513.jpg" 
+      img: "/images/products/corporate_formal_trousers_1789840370513.webp" 
     },
     { 
       title: "Men's Corporate T-Shirts", 
       desc: "A smart-casual essential. We utilize breathable pique cotton that ensures comfort in any climate, while offering the perfect canvas for your company's logo embroidery.",
       quote: "Smart-casual wear that speaks your brand's language.",
-      img: "/images/products/corporate_polo_tees_1789840388961.jpg" 
+      img: "/images/products/corporate_polo_tees_1789840388961.webp" 
     },
     { 
       title: "Women's Formal Shirts & Trousers", 
       desc: "Tailored to perfection, our women's formal line exudes authority and confidence. A staple for those who command the room in any business development or front desk role.",
       quote: "Command the room with impeccable tailoring.",
-      img: "/images/products/new_winter_waistcoat.jpg" 
+      img: "/images/products/new_winter_waistcoat.webp" 
     },
     { 
       title: "Women's Corporate Sarees", 
       desc: "Elegance meets professional corporate styling. Our uniform sarees are designed for ease of draping and all-day comfort, ideal for front desk, educational, and service teams.",
       quote: "Timeless elegance for the modern workplace.",
-      img: "/images/products/hospital_tunics_pants_1789887565362.jpg" 
+      img: "/images/products/hospital_tunics_pants_1789887565362.webp" 
     },
     { 
       title: "Women's Corporate T-Shirts", 
       desc: "Comfort and branding combined. Tailored specifically for a flattering feminine fit while maintaining a professional standard for IT and software company teams.",
       quote: "Comfort and branding combined effortlessly.",
-      img: "/images/products/school_tshirt_1789884872133.jpg" 
+      img: "/images/products/school_tshirt_1789884872133.webp" 
     },
   ];
 
@@ -116,9 +116,9 @@ export default function WorkWear() {
         
         {/* Floating Editorial Images */}
         <div className="absolute inset-0 w-full h-full pointer-events-none">
-          <img src="/images/products/corporate_formal_trousers_1789840370513.jpg" className="parallax-img absolute top-[20%] left-[2%] md:left-[5%] w-48 md:w-80 aspect-[3/4] object-cover opacity-90 shadow-2xl" data-speed="1.2" />
-          <img src="/images/products/new_winter_waistcoat.jpg" className="parallax-img absolute top-[40%] right-[2%] md:right-[5%] w-56 md:w-96 aspect-[3/4] object-cover opacity-90 shadow-2xl" data-speed="0.8" />
-          <img src="/images/products/corporate_polo_tees_1789840388961.jpg" className="parallax-img absolute top-[75%] left-[15%] md:left-[25%] w-64 md:w-[30rem] aspect-[4/5] object-cover opacity-90 shadow-2xl" data-speed="1.5" />
+          <img src="/images/products/corporate_formal_trousers_1789840370513.webp" className="parallax-img absolute top-[20%] left-[2%] md:left-[5%] w-48 md:w-80 aspect-[3/4] object-cover opacity-90 shadow-2xl" data-speed="1.2" />
+          <img src="/images/products/new_winter_waistcoat.webp" className="parallax-img absolute top-[40%] right-[2%] md:right-[5%] w-56 md:w-96 aspect-[3/4] object-cover opacity-90 shadow-2xl" data-speed="0.8" />
+          <img src="/images/products/corporate_polo_tees_1789840388961.webp" className="parallax-img absolute top-[75%] left-[15%] md:left-[25%] w-64 md:w-[30rem] aspect-[4/5] object-cover opacity-90 shadow-2xl" data-speed="1.5" />
         </div>
 
         {/* Massive Typography */}

@@ -80,61 +80,61 @@ export default function SchoolUniforms() {
       title: "School Frocks", 
       desc: "Elegantly tailored frocks designed for young girls, combining comfort with a smart, pristine look. Breathable fabric ensures all-day ease in the classroom.",
       quote: "Classic comfort for the modern classroom.",
-      img: "/images/products/school_frock_1789884830546.jpg" 
+      img: "/images/products/school_frock_1789884830546.webp" 
     },
     { 
       title: "Pleated Skirts", 
       desc: "Our pleated skirts are woven to hold their shape wash after wash. Providing a neat, structured appearance while allowing full freedom of movement for active students.",
       quote: "Sharp pleats, resilient fabric.",
-      img: "/images/products/school_skirt_1789884846197.jpg" 
+      img: "/images/products/school_skirt_1789884846197.webp" 
     },
     { 
       title: "Boys Shorts", 
       desc: "Designed for the relentless energy of youth, our boys' shorts combine breathable cotton blends with reinforced stitching to withstand the daily rigors of the playground.",
       quote: "Built to endure daily adventures.",
-      img: "/images/products/boys_school_uniform_1789839759243.jpg" 
+      img: "/images/products/boys_school_uniform_1789839759243.webp" 
     },
     { 
       title: "Girls Pinafores", 
       desc: "A perfect blend of classic elegance and everyday practicality. Our pinafores are tailored from premium, stain-resistant fabrics that retain their vibrant color.",
       quote: "Timeless style meets modern resilience.",
-      img: "/images/products/girls_school_pinafore_1789839775913.jpg" 
+      img: "/images/products/girls_school_pinafore_1789839775913.webp" 
     },
     { 
       title: "Classic Shirts", 
       desc: "Crisp, lightweight, and incredibly durable. Our classic school shirts are designed with anti-wrinkle technology so students look sharp from the morning bell to dismissal.",
       quote: "Pristine presentation, everyday.",
-      img: "/images/products/boys_school_uniform_1789839759243.jpg" 
+      img: "/images/products/boys_school_uniform_1789839759243.webp" 
     },
     { 
       title: "Formal Pants", 
       desc: "Premium tailored school pants that offer a distinguished, formal silhouette without sacrificing comfort. Featuring an adjustable waist and robust fabric.",
       quote: "A distinguished silhouette for every student.",
-      img: "/images/products/school_pant_1789884859416.jpg" 
+      img: "/images/products/school_pant_1789884859416.webp" 
     },
     { 
       title: "Sports T-Shirts", 
       desc: "Engineered for physical education, these sports t-shirts use advanced moisture-wicking technology to keep students cool, dry, and focused during athletic activities.",
       quote: "Breathable performance for active days.",
-      img: "/images/products/school_tshirt_1789884872133.jpg" 
+      img: "/images/products/school_tshirt_1789884872133.webp" 
     },
     { 
       title: "Track Pants", 
       desc: "Performance wear redefined. Featuring high-elasticity waistbands and articulated knees for unrestricted movement during sports and physical education.",
       quote: "Unrestricted movement for the active student.",
-      img: "/images/products/school_sports_trackpants_1789839789307.jpg" 
+      img: "/images/products/school_sports_trackpants_1789839789307.webp" 
     },
     { 
       title: "Winter Waist Coats", 
       desc: "When the temperature drops, our winter waist coats provide the perfect layer of insulation. Expertly tailored to fit seamlessly over shirts without adding bulk.",
       quote: "Sophisticated warmth for cold mornings.",
-      img: "/images/products/new_winter_waistcoat.jpg" 
+      img: "/images/products/new_winter_waistcoat.webp" 
     },
     { 
       title: "School Bags", 
       desc: "Ergonomically designed to distribute weight evenly, our school bags are built with ultra-durable, water-resistant materials to protect books and tech in all conditions.",
       quote: "Durable protection for everyday essentials.",
-      img: "/images/products/school_bag_1789884884376.jpg" 
+      img: "/images/products/school_bag_1789884884376.webp" 
     }
   ];
 
@@ -146,9 +146,9 @@ export default function SchoolUniforms() {
         
         {/* Floating Editorial Images */}
         <div className="absolute inset-0 w-full h-full pointer-events-none">
-          <img src="/images/products/school_frock_1789884830546.jpg" className="parallax-img absolute top-[20%] left-[2%] md:left-[5%] w-48 md:w-80 aspect-[3/4] object-cover opacity-90 shadow-2xl" data-speed="1.2" />
-          <img src="/images/products/school_skirt_1789884846197.jpg" className="parallax-img absolute top-[40%] right-[2%] md:right-[5%] w-56 md:w-96 aspect-[3/4] object-cover opacity-90 shadow-2xl" data-speed="0.8" />
-          <img src="/images/products/boys_school_uniform_1789839759243.jpg" className="parallax-img absolute top-[75%] left-[15%] md:left-[25%] w-64 md:w-[30rem] aspect-[4/5] object-cover opacity-90 shadow-2xl" data-speed="1.5" />
+          <img src="/images/products/school_frock_1789884830546.webp" className="parallax-img absolute top-[20%] left-[2%] md:left-[5%] w-48 md:w-80 aspect-[3/4] object-cover opacity-90 shadow-2xl" data-speed="1.2" />
+          <img src="/images/products/school_skirt_1789884846197.webp" className="parallax-img absolute top-[40%] right-[2%] md:right-[5%] w-56 md:w-96 aspect-[3/4] object-cover opacity-90 shadow-2xl" data-speed="0.8" />
+          <img src="/images/products/boys_school_uniform_1789839759243.webp" className="parallax-img absolute top-[75%] left-[15%] md:left-[25%] w-64 md:w-[30rem] aspect-[4/5] object-cover opacity-90 shadow-2xl" data-speed="1.5" />
         </div>
 
         {/* Massive Typography */}
