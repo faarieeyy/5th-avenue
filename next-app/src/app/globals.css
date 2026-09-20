@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@theme {
+  --color-fmrg-bg: #E8E3D9;
+  --color-fmrg-text: #2C241B;
+  --color-fmrg-accent: #2E472D;
+  --color-fmrg-muted: #CC5A3A;
+  
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+}
+
+:root {
+  --background: #E8E3D9;
+  --foreground: #2C241B;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* FMRG typically forces light mode or a very specific dark mode, but we will keep their exact earthy aesthetic forced */
+  :root {
+    --background: #E8E3D9;
+    --foreground: #2C241B;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Removed custom cursor hiding to ensure mouse is always visible */
+
+/* FMRG Typography Classes */
+.font-fmrg-serif {
+  font-family: var(--font-serif);
+}
+.font-fmrg-sans {
+  font-family: var(--font-sans);
+}
+
+.fmrg-hero-text {
+  font-size: clamp(6rem, 16vw, 220px);
+  line-height: 0.85;
+  letter-spacing: -0.02em;
+}
+
+.fmrg-statement-text {
+  font-size: clamp(2rem, 5vw, 64px);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.fmrg-stat-number {
+  font-size: clamp(4rem, 8vw, 120px);
+  line-height: 1;
+  color: var(--color-fmrg-accent);
+}
+
+.fmrg-nav-link {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+/* FMRG Noise Overlay */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* FMRG Hover Effect */
+.fmrg-hover { 
+  position: relative; 
+  overflow: hidden; 
+  display: inline-flex; 
+}
+.fmrg-hover-inner { 
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); 
+}
+.fmrg-hover:hover .fmrg-hover-inner { 
+  transform: translateY(-100%); 
+}
+.fmrg-hover-inner::after { 
+  content: attr(data-text); 
+  position: absolute; 
+  left: 0; 
+  top: 100%; 
+  transform-origin: top left; 
+}
+
+/* Utilities */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
