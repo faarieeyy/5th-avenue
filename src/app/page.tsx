@@ -30,7 +30,7 @@ export default function Home() {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
 
-      const frameCount = 885;
+      const frameCount = 886;
       const currentFrame = (index: number) => `/hero-frames/frame_${(index + 1).toString().padStart(4, '0')}.webp`;
 
       const images: HTMLImageElement[] = [];
