@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
@@ -12,6 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
   const container = useRef(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [activeCollectionTab, setActiveCollectionTab] = useState<number>(0);
 
   useGSAP(() => {
     // 1. Initial Load (Preloader finishes)
@@ -416,35 +417,106 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. ASYMMETRIC GRID (Toggle Actions) */}
+      {/* 5. DEDICATED COLLECTIONS SHOWCASE (School · Healthcare · Corporate) */}
       <section className="split-grid-section px-8 md:px-12 pb-32 max-w-[100rem] mx-auto pt-48 overflow-hidden bg-[var(--color-fmrg-bg)]">
-        <div className="superstar-entry grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-32 items-start">
+        <div className="superstar-entry grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-32 items-center">
           
-          <div className="relative h-[80vh] w-full overflow-hidden rounded-xl bg-[#FAF8F5] border border-black/10 shadow-2xl flex items-center justify-center p-4">
-             <div className="split-image relative w-full h-full flex items-center justify-center overflow-hidden">
+          {/* Flagship Product Showcase (100% Fully Shown with object-contain, exact ratio) */}
+          <div className="relative h-[80vh] w-full overflow-hidden rounded-2xl bg-[#FAF8F5] border border-black/10 shadow-2xl flex flex-col p-4 md:p-6 justify-between group">
+             {/* Main Image View */}
+             <div className="relative w-full flex-1 flex items-center justify-center overflow-hidden">
                 <img 
-                  src="/images/products/senior_earthy_waistcoat_skirt.jpeg" 
-                  className="w-full h-full object-contain transition-transform duration-700 ease-out" 
-                  alt="5th Avenue Uniform Excellence" 
+                  key={activeCollectionTab}
+                  src={
+                    activeCollectionTab === 0 
+                      ? "/images/products/sports_house_quad_chevron.jpeg"
+                      : activeCollectionTab === 1
+                      ? "/images/products/medical_female_doctor_coat.jpeg"
+                      : "/images/products/new_winter_waistcoat.webp"
+                  } 
+                  className="w-full h-full object-contain filter drop-shadow-md transition-all duration-700 ease-out" 
+                  alt={
+                    activeCollectionTab === 0
+                      ? "5th Avenue School House Uniforms"
+                      : activeCollectionTab === 1
+                      ? "5th Avenue Healthcare Doctor Consultation Uniform"
+                      : "5th Avenue Corporate Executive Waistcoat"
+                  } 
                 />
+             </div>
+             
+             {/* Card Caption Strip */}
+             <div className="mt-4 pt-3 border-t border-black/10 flex items-center justify-between">
+                <div>
+                  <span className="text-[10px] uppercase font-mono tracking-wider text-slate-500 block">
+                    {activeCollectionTab === 0 && "School House Spirit · Courage · Discipline · Harmony · Excellence"}
+                    {activeCollectionTab === 1 && "Clinical Consultation Coat · Antimicrobial Fluid Barrier"}
+                    {activeCollectionTab === 2 && "Executive Waistcoat Duo · Luxury Corporate & Hospitality"}
+                  </span>
+                  <h4 className="font-fmrg-serif text-base md:text-lg text-slate-900 line-clamp-1">
+                    {activeCollectionTab === 0 && "Quad-House Athletic & Academy Uniforms"}
+                    {activeCollectionTab === 1 && "Physician Consultation & Clinical OPD Coat"}
+                    {activeCollectionTab === 2 && "Executive Hospitality & Corporate Waistcoats"}
+                  </h4>
+                </div>
+                <Link 
+                  href={
+                    activeCollectionTab === 0
+                      ? "/school-uniforms"
+                      : activeCollectionTab === 1
+                      ? "/healthcare-uniforms"
+                      : "/work-wear"
+                  } 
+                  className="px-4 py-1.5 rounded-full text-xs font-semibold bg-slate-900 text-white hover:bg-slate-800 transition-colors shrink-0 shadow-sm inline-flex items-center gap-1.5"
+                >
+                  <span>Explore</span>
+                  <span>→</span>
+                </Link>
              </div>
           </div>
 
-          <div className="flex flex-col gap-24 pt-12 md:pt-32">
+          <div className="flex flex-col gap-16 md:gap-20 pt-8 md:pt-16">
             
             <div className="metric-item">
               <h3 className="font-fmrg-serif fmrg-stat-number mb-4">03</h3>
-              <p className="font-fmrg-sans fmrg-nav-link text-[var(--color-fmrg-text)]">Dedicated Collections<br/>(School, Healthcare, Corporate)</p>
+              <p className="font-fmrg-sans fmrg-nav-link text-[var(--color-fmrg-text)] mb-6">
+                Dedicated Collections<br/>(School, Healthcare, Corporate)
+              </p>
+              
+              {/* Interactive Category Selector Pills */}
+              <div className="flex flex-wrap gap-2.5">
+                {[
+                  { label: "01 School Uniforms", idx: 0 },
+                  { label: "02 Healthcare", idx: 1 },
+                  { label: "03 Work Wear", idx: 2 }
+                ].map((tab) => (
+                  <button
+                    key={tab.idx}
+                    onClick={() => setActiveCollectionTab(tab.idx)}
+                    className={`px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider transition-all cursor-pointer ${
+                      activeCollectionTab === tab.idx
+                        ? "bg-[#171717] text-white shadow-lg font-bold scale-105"
+                        : "bg-black/5 hover:bg-black/10 text-slate-700 border border-black/10"
+                    }`}
+                  >
+                    {tab.label}
+                  </button>
+                ))}
+              </div>
             </div>
 
             <div className="metric-item">
               <h3 className="font-fmrg-serif fmrg-stat-number mb-4">100%</h3>
-              <p className="font-fmrg-sans fmrg-nav-link text-[var(--color-fmrg-text)]">Custom Branding & Fitting<br/>Made for Your Identity</p>
+              <p className="font-fmrg-sans fmrg-nav-link text-[var(--color-fmrg-text)]">
+                Custom Branding & Fitting<br/>Made for Your Identity
+              </p>
             </div>
 
-            <div className="metric-item pt-12 border-t border-[var(--color-fmrg-muted)]">
-              <Link href="/contact" className="fmrg-hover group">
-                <span className="fmrg-hover-inner font-fmrg-sans fmrg-nav-link text-[var(--color-fmrg-accent)]" data-text="Request a Quote">Request a Quote</span>
+            <div className="metric-item pt-8 border-t border-[var(--color-fmrg-muted)]">
+              <Link href="/contact" className="fmrg-hover group inline-block">
+                <span className="fmrg-hover-inner font-fmrg-sans fmrg-nav-link text-[var(--color-fmrg-accent)] font-semibold" data-text="Request a Quote">
+                  Request a Quote
+                </span>
               </Link>
             </div>
 
