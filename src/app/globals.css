@@ -1,30 +1,30 @@
 @import "tailwindcss";
 
 @theme {
-  --color-fmrg-bg: #FAF8F5;
-  --color-fmrg-text: #171717;
-  --color-fmrg-accent: #8E6B3E;
-  --color-fmrg-muted: #6E665D;
-  --color-fmrg-highlight: #C5A880;
+  --color-fmrg-bg: #FFFFFF;
+  --color-fmrg-text: #0F172A;
+  --color-fmrg-accent: #B48C36;
+  --color-fmrg-muted: #64748B;
+  --color-fmrg-highlight: #D4AF37;
   
-  --color-category-school: #7C4A27;
-  --color-category-healthcare: #163E32;
-  --color-category-workwear: #182028;
+  --color-category-school: #1E3A8A;
+  --color-category-healthcare: #0D9488;
+  --color-category-workwear: #0B0F17;
 
   --font-serif: 'Playfair Display', serif;
   --font-sans: 'Inter', sans-serif;
 }
 
 :root {
-  --background: #FAF8F5;
-  --foreground: #171717;
+  --background: #FFFFFF;
+  --foreground: #0F172A;
 }
 
 @media (prefers-color-scheme: dark) {
-  /* Elegant uniform atelier aesthetic */
+  /* Crisp modern uniform atelier aesthetic */
   :root {
-    --background: #FAF8F5;
-    --foreground: #171717;
+    --background: #FFFFFF;
+    --foreground: #0F172A;
   }
 }
 

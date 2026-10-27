@@ -144,17 +144,17 @@ export default function Home() {
     }, 0);
     
     // Dynamic background color transitions across specific category palettes:
-    // 0.00 -> 0.30: School (#7C4A27 - Warm Amber Ochre)
-    // 0.30 -> 0.65: Healthcare (#163E32 - Deep Restorative Forest Emerald)
-    // 0.65 -> 1.00: Work Wear (#182028 - Executive Tailored Obsidian Slate)
+    // 0.00 -> 0.30: School (#0F172A - Oxford Collegiate Navy)
+    // 0.30 -> 0.65: Healthcare (#0D9488 - Luminous Surgical Teal)
+    // 0.65 -> 1.00: Work Wear (#0B0F17 - Executive Midnight Obsidian)
     productsTl.to(".products-section", { 
-      backgroundColor: "#163E32", 
+      backgroundColor: "#0D9488", 
       ease: "power2.inOut", 
       duration: 0.08 
     }, 0.28);
 
     productsTl.to(".products-section", { 
-      backgroundColor: "#182028", 
+      backgroundColor: "#0B0F17", 
       ease: "power2.inOut", 
       duration: 0.08 
     }, 0.60);
@@ -225,14 +225,14 @@ export default function Home() {
       </section>
 
       {/* 3. PRODUCTS HORIZONTAL SCROLL with dynamic specific category colors */}
-      {/* Starts with School (#7C4A27) -> Healthcare (#163E32) -> Work Wear (#182028) */}
-      <section className="products-section relative h-screen w-full bg-[#7C4A27] text-white overflow-hidden flex flex-col justify-center transition-colors duration-500">
+      {/* Starts with School (#0F172A) -> Healthcare (#0D9488) -> Work Wear (#0B0F17) */}
+      <section className="products-section relative h-screen w-full bg-[#0F172A] text-white overflow-hidden flex flex-col justify-center transition-colors duration-500">
         
         {/* Editorial Header */}
         <div className="absolute top-12 md:top-16 left-8 md:left-14 right-8 md:right-14 z-20 flex flex-col md:flex-row md:items-end justify-between gap-4 pointer-events-none">
           <div>
             <div className="flex items-center gap-2.5 mb-2">
-              <span className="w-2 h-2 rounded-full bg-[var(--color-fmrg-highlight)] animate-pulse"></span>
+              <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
               <p className="fmrg-nav-link text-white/80 text-xs tracking-[0.2em] uppercase font-semibold">Curated Garment Lineup</p>
             </div>
             <h3 className="font-fmrg-serif text-3xl md:text-5xl lg:text-6xl text-white tracking-tight leading-none drop-shadow-sm">
@@ -244,23 +244,23 @@ export default function Home() {
           <div className="flex items-center gap-2 pointer-events-auto">
             <Link 
               href="/school-uniforms" 
-              className="px-3.5 py-1.5 rounded-full border border-white/20 bg-black/25 hover:bg-[#8C5229] text-white/90 hover:text-white text-xs tracking-wider uppercase transition-all backdrop-blur-md flex items-center gap-2"
+              className="px-3.5 py-1.5 rounded-full border border-white/20 bg-black/30 hover:bg-blue-900 text-white/90 hover:text-white text-xs tracking-wider uppercase transition-all backdrop-blur-md flex items-center gap-2"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-[#E2B774]"></span>
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
               School
             </Link>
             <Link 
               href="/healthcare-uniforms" 
-              className="px-3.5 py-1.5 rounded-full border border-white/20 bg-black/25 hover:bg-[#1A4B3D] text-white/90 hover:text-white text-xs tracking-wider uppercase transition-all backdrop-blur-md flex items-center gap-2"
+              className="px-3.5 py-1.5 rounded-full border border-white/20 bg-black/30 hover:bg-teal-700 text-white/90 hover:text-white text-xs tracking-wider uppercase transition-all backdrop-blur-md flex items-center gap-2"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-[#80CBA8]"></span>
+              <span className="w-1.5 h-1.5 rounded-full bg-teal-300"></span>
               Healthcare
             </Link>
             <Link 
               href="/work-wear" 
-              className="px-3.5 py-1.5 rounded-full border border-white/20 bg-black/25 hover:bg-[#222B36] text-white/90 hover:text-white text-xs tracking-wider uppercase transition-all backdrop-blur-md flex items-center gap-2"
+              className="px-3.5 py-1.5 rounded-full border border-white/20 bg-black/30 hover:bg-slate-900 text-white/90 hover:text-white text-xs tracking-wider uppercase transition-all backdrop-blur-md flex items-center gap-2"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-[#CBD5E1]"></span>
+              <span className="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
               Work Wear
             </Link>
           </div>
@@ -277,8 +277,8 @@ export default function Home() {
               img: "/images/products/primary_girl_skirt_uniform.jpeg",
               href: "/school-uniforms",
               tag: "Pleated Skirt & Shirt",
-              accent: "#E2B774",
-              badge: "bg-[#8C532B]/40 text-[#FCEBD9] border-[#D4A373]/50"
+              accent: "#38BDF8",
+              badge: "bg-blue-950/70 text-blue-100 border-blue-400/50"
             },
             { 
               cat: "School", 
@@ -287,8 +287,8 @@ export default function Home() {
               img: "/images/products/sports_house_quad_chevron.jpeg",
               href: "/school-uniforms",
               tag: "Sublimated Sports Kit",
-              accent: "#E2B774",
-              badge: "bg-[#8C532B]/40 text-[#FCEBD9] border-[#D4A373]/50"
+              accent: "#F59E0B",
+              badge: "bg-blue-950/70 text-amber-200 border-amber-400/50"
             },
             { 
               cat: "Healthcare", 
@@ -297,8 +297,8 @@ export default function Home() {
               img: "/images/products/medical_doctor_full_coat_male.jpeg",
               href: "/healthcare-uniforms",
               tag: "Full-Length White Coat",
-              accent: "#80CBA8",
-              badge: "bg-[#1E5242]/40 text-[#D8F3DC] border-[#74C69D]/50"
+              accent: "#5EEAD4",
+              badge: "bg-teal-950/70 text-teal-100 border-teal-400/50"
             },
             { 
               cat: "Healthcare", 
@@ -307,8 +307,8 @@ export default function Home() {
               img: "/images/products/medical_royal_blue_scrub_set.jpeg",
               href: "/healthcare-uniforms",
               tag: "V-Neck Scrub Suit",
-              accent: "#80CBA8",
-              badge: "bg-[#1E5242]/40 text-[#D8F3DC] border-[#74C69D]/50"
+              accent: "#5EEAD4",
+              badge: "bg-teal-950/70 text-teal-100 border-teal-400/50"
             },
             { 
               cat: "Work Wear", 
@@ -317,8 +317,8 @@ export default function Home() {
               img: "/images/products/corporate_formal_trousers_1789840370513.webp",
               href: "/work-wear",
               tag: "Tailored Formal Trousers",
-              accent: "#CBD5E1",
-              badge: "bg-[#334155]/40 text-[#F1F5F9] border-[#94A3B8]/50"
+              accent: "#38BDF8",
+              badge: "bg-slate-950/70 text-sky-200 border-sky-400/50"
             },
             { 
               cat: "Work Wear", 
@@ -327,8 +327,8 @@ export default function Home() {
               img: "/images/products/corporate_polo_tees_1789840388961.webp",
               href: "/work-wear",
               tag: "Pique Cotton Polo",
-              accent: "#CBD5E1",
-              badge: "bg-[#334155]/40 text-[#F1F5F9] border-[#94A3B8]/50"
+              accent: "#86EFAC",
+              badge: "bg-slate-950/70 text-emerald-200 border-emerald-400/50"
             }
           ].map((prod, idx) => (
             <Link 
@@ -418,11 +418,11 @@ export default function Home() {
       </section>
 
       {/* 5. DEDICATED COLLECTIONS SHOWCASE (School · Healthcare · Corporate) */}
-      <section className="split-grid-section px-8 md:px-12 pb-32 max-w-[100rem] mx-auto pt-48 overflow-hidden bg-[var(--color-fmrg-bg)]">
+      <section className="split-grid-section px-8 md:px-12 pb-32 max-w-[100rem] mx-auto pt-48 overflow-hidden bg-slate-50/70 border-t border-slate-200">
         <div className="superstar-entry grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-32 items-center">
           
           {/* Flagship Product Showcase (100% Fully Shown with object-contain, exact ratio) */}
-          <div className="relative h-[80vh] w-full overflow-hidden rounded-2xl bg-[#FAF8F5] border border-black/10 shadow-2xl flex flex-col p-4 md:p-6 justify-between group">
+          <div className="relative h-[80vh] w-full overflow-hidden rounded-2xl bg-white border border-slate-200 shadow-2xl flex flex-col p-4 md:p-6 justify-between group">
              {/* Main Image View */}
              <div className="relative w-full flex-1 flex items-center justify-center overflow-hidden">
                 <img 
