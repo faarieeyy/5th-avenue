@@ -5,6 +5,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitText from "@/components/SplitText";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -78,99 +79,92 @@ export default function HealthcareUniforms() {
 
   const products = [
     { 
-      title: "Doctor Coats", 
-      desc: "Immaculately tailored doctor coats engineered for comfort during long shifts, featuring an anti-microbial finish and deep utility pockets.",
-      quote: "Pristine armor for the frontlines of care.",
-      img: "/images/products/hospital_doctor_coat_1789887508441.webp" 
+      title: "Physician's Full-Length Consultation Lab Coat", 
+      role: "Senior Physician & Clinical Consultant",
+      desc: "Tailored for senior physicians and hospital consultants. Worn here by Dr. Aarav during morning clinical rounds, this full-length white coat is crafted in fluid-repellent poly-viscose twill featuring crisp notched lapels, four front buttons, a dedicated chest pocket with pen slot, and deep hip utility pockets for your stethoscope and clinical notes. Paired with straight-cut stain-resistant white medical trousers.",
+      quote: "Pristine authority and comfort for intensive clinical ward rounds.",
+      specs: "Knee-Length Cut · Chest Pen Slot · Deep Hip Pockets · White Medical Trousers Included",
+      img: "/images/products/medical_doctor_full_coat_male.jpeg" 
     },
     { 
-      title: "V-Neck Scrubs", 
-      desc: "Designed for those who never stop moving. These scrub sets use a lightweight, fluid-resistant fabric that breathes and stretches effortlessly.",
-      quote: "Fluid-resistant comfort for relentless shifts.",
-      img: "/images/products/hospital_vneck_scrub_1789887522110.webp" 
+      title: "Specialist Nurse Lilac Tunic & Trousers Set", 
+      role: "Nursing Staff & Specialist Clinical Care",
+      desc: "Designed for dedicated frontline nursing professionals and clinical specialists like Nurse Meera. Cut in soothing pastel lilac with crisp white contrast piping along the mandarin neckband, pocket edges, and short sleeve cuffs. Features a secure front button closure and matching ergonomic lilac trousers engineered for effortless bending, walking, and patient mobility throughout 12-hour shifts.",
+      quote: "Empowering compassionate care with comfort, elegance, and 12-hour mobility.",
+      specs: "Mandarin Collar with White Piping · Contrast Pocket Trim · Breathable Soft-Touch Twill · 12-Hour Shift Fit",
+      img: "/images/products/medical_nurse_lavender_tunic.jpeg" 
     },
     { 
-      title: "Lab Coats", 
-      desc: "Crisp white tailoring for laboratory professionals, offering protection and precision with reinforced seams and smart styling.",
-      quote: "Precision tailoring for meticulous work.",
-      img: "/images/products/hospital_lab_coat_1789887534891.webp" 
+      title: "Royal Cobalt Blue Contrast V-Neck Scrubs", 
+      role: "Emergency Teams & Surgical Units",
+      desc: "Crafted for emergency physicians, ICU teams, and surgical specialists like Dr. Kavya. This set features vibrant royal cobalt blue highlighted by crisp white piping along the rounded V-neckline and dual slant hip pockets. Tailored in lightweight 4-way stretch micro-fiber with antimicrobial protection, paired with matching comfort-fit drawstring scrub trousers.",
+      quote: "Fluid-resistant high-performance scrubs engineered for relentless shifts.",
+      specs: "Rounded V-Neck with Contrast Trim · Dual Slant Pockets · 4-Way Stretch Aerocool · Fluid-Barrier Finish",
+      img: "/images/products/medical_royal_blue_scrub_set.jpeg" 
     },
     { 
-      title: "Nurse Uniforms", 
-      desc: "Professional and caring appearance meets extreme mobility. Our nurse uniforms blend soft-touch fabrics with highly functional designs.",
-      quote: "Empowering mobility without compromising elegance.",
-      img: "/images/products/hospital_nurse_uniform_1789887551064.webp" 
+      title: "Women's Short-Sleeve Doctor Consultation Coat", 
+      role: "Resident Doctors & Outpatient Specialists",
+      desc: "Engineered for outpatient physicians, dentists, and resident officers like Dr. Sneha. A tailored short-sleeve silhouette featuring crisp notched lapels, a 4-button placket, reinforced chest pocket, and deep side pockets. Paired with clean white medical trousers that offer a dignified clinical appearance without sleeve interference during patient examinations.",
+      quote: "Distinguished clinical presentation and unrestricted patient examination ease.",
+      specs: "Short-Sleeve Examination Cut · Notched Lapels · 4-Button Placket · Tailored Feminine Fit",
+      img: "/images/products/medical_female_doctor_coat.jpeg" 
     },
     { 
-      title: "Tunics & Pants", 
-      desc: "Elegant yet practical tunic sets offering superior comfort and a distinguished look for senior nursing staff and specialists.",
-      quote: "Sophisticated styling for modern healthcare.",
-      img: "/images/products/hospital_tunics_pants_1789887565362.webp" 
-    },
-    { 
-      title: "Attender Uniforms", 
-      desc: "Neat and professional attender uniforms designed to withstand rigorous daily wear while maintaining a sharp appearance.",
-      quote: "Durable presentation for everyday support.",
-      img: "/images/products/hospital_attender_1789887603892.webp" 
-    },
-    { 
-      title: "Ward Boy Uniforms", 
-      desc: "Practical and comfortable sets in calming tones, providing high utility and ease of movement for ward assistants.",
-      quote: "High utility for essential assistance.",
-      img: "/images/products/hospital_ward_boy_1789887617894.webp" 
-    },
-    { 
-      title: "Housekeeping", 
-      desc: "Highly functional cleaning uniforms that don't sacrifice elegance. Made from easy-care, stain-release fabrics.",
-      quote: "Functional elegance for facility care.",
-      img: "/images/products/hospital_housekeeping_1789887631446.webp" 
-    },
-    { 
-      title: "Staff Shirt & Pant", 
-      desc: "Clean lines and professional styling for hospital administration and support staff. Lightweight and breathable for all-day comfort.",
-      quote: "Professional attire for healthcare administration.",
-      img: "/images/products/corporate_formal_trousers_1789840370513.webp" 
-    },
-    { 
-      title: "Front Office Suites", 
-      desc: "Sophisticated corporate healthcare attire ensuring your front desk team makes a lasting, premium first impression.",
-      quote: "A distinguished welcome for every patient.",
-      img: "/images/products/new_winter_waistcoat.webp" 
+      title: "Consultant White Coat Over Navy Scrub Ensemble", 
+      role: "Department Chiefs & Medical Directors",
+      desc: "Designed for department chiefs and surgical consultants like Dr. Rahul who transition between clinical OPD consultations and procedural suites. Features an impeccably structured mid-length white consultation lab coat layered over deep navy V-neck surgical scrubs and navy scrub trousers, combining authoritative executive presence with procedural readiness.",
+      quote: "Executive clinical presence meeting immediate procedural readiness.",
+      specs: "Layered Dual-Uniform System · Mid-Length Lab Coat · Deep Navy V-Neck Scrub Base · Fluid & Chemical Repellent",
+      img: "/images/products/medical_physician_navy_scrubs.jpeg" 
     }
   ];
 
   return (
-    <main ref={containerRef} className="bg-fmrg-bg text-fmrg-text">
+    <main ref={containerRef} className="bg-[#F0F7F4] text-[#0D261F] min-h-screen">
       
-      {/* DYNAMIC PARALLAX HERO */}
-      <section className="healthcare-hero relative h-screen w-full overflow-hidden flex items-center justify-center bg-fmrg-bg">
+      {/* 1. DYNAMIC PARALLAX HERO (Clinical Deep Emerald Atmosphere) */}
+      <section className="healthcare-hero relative h-screen w-full overflow-hidden flex items-center justify-center bg-[#0B211A] text-white">
         
+        {/* Subtle Ambient Background Gradient */}
+        <div className="absolute inset-0 bg-radial from-[#163E32]/60 via-transparent to-transparent opacity-50 pointer-events-none"></div>
+
         {/* Floating Editorial Images */}
         <div className="absolute inset-0 w-full h-full pointer-events-none">
-          <img src="/images/products/hospital_doctor_coat_1789887508441.webp" className="parallax-img absolute top-[15%] left-[5%] w-48 md:w-80 aspect-[3/4] object-cover opacity-90 shadow-2xl" data-speed="1.1" />
-          <img src="/images/products/hospital_vneck_scrub_1789887522110.webp" className="parallax-img absolute top-[45%] right-[8%] w-56 md:w-96 aspect-[3/4] object-cover opacity-90 shadow-2xl" data-speed="0.7" />
-          <img src="/images/products/hospital_tunics_pants_1789887565362.webp" className="parallax-img absolute top-[70%] left-[25%] w-64 md:w-[28rem] aspect-[3/4] object-cover opacity-90 shadow-2xl" data-speed="1.4" />
+          <img src="/images/products/medical_doctor_full_coat_male.jpeg" className="parallax-img absolute top-[15%] left-[5%] w-48 md:w-80 aspect-[3/4] object-cover opacity-90 shadow-2xl rounded-sm border border-white/10" data-speed="1.1" alt="Doctor Consultation Coat" />
+          <img src="/images/products/medical_nurse_lavender_tunic.jpeg" className="parallax-img absolute top-[45%] right-[8%] w-56 md:w-96 aspect-[3/4] object-cover opacity-90 shadow-2xl rounded-sm border border-white/10" data-speed="0.7" alt="Nurse Tunic Set" />
+          <img src="/images/products/medical_royal_blue_scrub_set.jpeg" className="parallax-img absolute top-[70%] left-[25%] w-64 md:w-[28rem] aspect-[3/4] object-cover opacity-90 shadow-2xl rounded-sm border border-white/10" data-speed="1.4" alt="Royal Blue Scrubs" />
         </div>
 
         {/* Massive Typography */}
-        <div className="relative z-10 mix-blend-difference text-white text-center w-full px-4">
+        <div className="relative z-10 text-center w-full px-4">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#163E32]/80 border border-[#80CBA8]/30 mb-6 backdrop-blur-md">
+            <span className="w-2 h-2 rounded-full bg-[#80CBA8] animate-pulse"></span>
+            <span className="text-xs uppercase tracking-[0.25em] text-[#A3E4D7] font-semibold">Clinical Uniform Atelier</span>
+          </div>
           <h1 className="reveal-text font-fmrg-serif flex flex-col items-center justify-center">
-             <span className="text-[12vw] leading-[0.85] tracking-tighter uppercase block overflow-hidden">
+             <span className="text-[12vw] leading-[0.85] tracking-tighter uppercase block overflow-hidden text-white drop-shadow-md">
                <SplitText text="HEALTHCARE" />
              </span>
-             <span className="text-[4vw] md:text-[3vw] italic lowercase font-light block mt-4 tracking-wide overflow-hidden opacity-90">
+             <span className="text-[4vw] md:text-[3vw] italic lowercase font-light block mt-4 tracking-wide overflow-hidden text-[#80CBA8]/90">
                <SplitText text="woven to care." />
              </span>
           </h1>
         </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 text-white/70 pointer-events-none">
+          <span className="text-[11px] uppercase tracking-[0.2em]">Explore Medical Collection</span>
+          <span className="w-px h-8 bg-[#80CBA8]/50 animate-pulse"></span>
+        </div>
       </section>
 
-      {/* Split-Screen Sticky Section */}
+      {/* 2. Split-Screen Sticky Showcase (Serene Clinical Mint Universe) */}
       <section className="relative max-w-[100rem] mx-auto px-8 md:px-12 flex flex-col lg:flex-row pb-32 gap-12 lg:gap-24 pt-32">
         
         {/* Left Side: Sticky Image */}
         <div className="w-full lg:w-1/2 relative hidden lg:block">
-          <div className="lg:sticky lg:top-40 h-[60vh] lg:h-[75vh] w-full bg-gray-200 overflow-hidden shadow-2xl">
+          <div className="lg:sticky lg:top-40 h-[60vh] lg:h-[75vh] w-full bg-[#E3EEE9] overflow-hidden shadow-2xl rounded-xl border border-[#163E32]/15">
             {products.map((p, i) => (
               <img 
                 key={i}
@@ -188,30 +182,64 @@ export default function HealthcareUniforms() {
             <div key={i} className={`text-section text-section-${i} lg:min-h-screen flex flex-col justify-center py-24 lg:py-0`}>
                 
                 {/* Mobile Image (Hidden on Desktop) */}
-                <div className="lg:hidden w-full aspect-[3/4] mb-12 bg-gray-200 shadow-2xl overflow-hidden relative">
+                <div className="lg:hidden w-full aspect-[3/4] mb-12 bg-[#E3EEE9] shadow-2xl overflow-hidden relative rounded-xl border border-[#163E32]/15">
                    <img src={p.img} alt={p.title} className="w-full h-full object-cover" />
                 </div>
 
-                <span className="font-fmrg-sans text-sm tracking-widest uppercase mb-4 text-fmrg-accent font-bold">
-                  {i < 9 ? `0${i + 1}` : i + 1} / {products.length < 10 ? `0${products.length}` : products.length}
-                </span>
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="font-fmrg-sans text-xs tracking-widest uppercase text-[#163E32] font-bold px-3 py-1 rounded-full bg-[#163E32]/10 border border-[#163E32]/20">
+                    {i < 9 ? `0${i + 1}` : i + 1} / {products.length < 10 ? `0${products.length}` : products.length}
+                  </span>
+                  <span className="text-[#163E32]/40">•</span>
+                  <span className="text-xs uppercase tracking-wider text-[#2D6A4F] font-semibold">
+                    {p.role}
+                  </span>
+                </div>
                 
-                <h2 className="product-title font-fmrg-serif text-5xl md:text-7xl mb-8 leading-tight">
+                <h2 className="product-title font-fmrg-serif text-3xl sm:text-4xl md:text-5xl mb-6 leading-tight text-[#0D261F]">
                   <SplitText text={p.title} />
                 </h2>
                 
-                <div className="mb-8 pl-6 border-l-2 border-fmrg-accent">
-                  <p className="font-fmrg-serif text-2xl md:text-3xl text-gray-800 italic">
+                <div className="mb-6 pl-6 border-l-2 border-[#163E32]">
+                  <p className="font-fmrg-serif text-xl sm:text-2xl text-[#163E32] italic leading-relaxed">
                     "{p.quote}"
                   </p>
                 </div>
                 
-                <p className="font-fmrg-sans text-lg text-gray-600 leading-relaxed max-w-xl">
+                <p className="font-fmrg-sans text-base sm:text-lg text-[#2D4A3E] leading-relaxed max-w-xl mb-6">
                   {p.desc}
                 </p>
+
+                {/* Craftsmanship Specs */}
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2 pt-4 border-t border-[#163E32]/15">
+                  <span className="text-xs uppercase tracking-wider text-[#163E32] font-bold shrink-0">Specifications:</span>
+                  <span className="text-xs text-[#2D4A3E] font-sans">{p.specs}</span>
+                </div>
                 
             </div>
           ))}
+
+          {/* Footer Contact Callout */}
+          <div className="mt-20 p-10 md:p-14 rounded-2xl bg-[#0B211A] text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl border border-[#163E32]/40">
+            <div>
+              <span className="text-xs uppercase tracking-[0.2em] text-[#80CBA8] font-semibold block mb-2">
+                Hospital Procurement & Bulk Institutional Orders
+              </span>
+              <h3 className="font-fmrg-serif text-3xl md:text-4xl text-white">
+                Equip Your Healthcare Facility With 5th Avenue.
+              </h3>
+              <p className="text-[#A3E4D7]/80 mt-2 max-w-xl text-sm leading-relaxed">
+                Hospital crest embroidery, department color-coding, and antimicrobial fluid-resistant bulk sizing across all clinical roles.
+              </p>
+            </div>
+            <Link
+              href="/contact"
+              className="px-8 py-4 bg-[#80CBA8] hover:bg-[#97D8BA] text-[#0B211A] rounded-full font-fmrg-sans text-xs uppercase tracking-widest font-bold transition-all shrink-0 shadow-lg"
+            >
+              Request Hospital Catalog →
+            </Link>
+          </div>
+
         </div>
 
       </section>

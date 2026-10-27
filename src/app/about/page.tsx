@@ -82,11 +82,11 @@ export default function About() {
                 </div>
                 <div className="dark-text border-t border-gray-800 pt-8 grid grid-cols-2 gap-8">
                   <div>
-                    <span className="font-fmrg-serif text-4xl text-[var(--color-fmrg-accent)] block mb-2">500k+</span>
+                    <span className="font-fmrg-serif text-4xl text-[var(--color-fmrg-highlight)] block mb-2">500k+</span>
                     <span className="fmrg-nav-link text-gray-500">Uniforms Delivered</span>
                   </div>
                   <div>
-                    <span className="font-fmrg-serif text-4xl text-[var(--color-fmrg-accent)] block mb-2">100%</span>
+                    <span className="font-fmrg-serif text-4xl text-[var(--color-fmrg-highlight)] block mb-2">100%</span>
                     <span className="fmrg-nav-link text-gray-500">Custom Fit</span>
                   </div>
                 </div>

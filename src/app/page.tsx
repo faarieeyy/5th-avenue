@@ -21,6 +21,7 @@ export default function Home() {
     const setupScroll = () => {
       // Hide the text initially
       gsap.set(".hero-text", { yPercent: 50, opacity: 0 });
+      gsap.set(".hero-statement", { y: 20, opacity: 0 });
 
       const canvas = canvasRef.current;
       if (!canvas) return;
@@ -94,24 +95,23 @@ export default function Home() {
         yPercent: 0,
         opacity: 1,
         ease: "power2.out",
-        duration: 0.1
-      }, 0.9);
+        duration: 0.08
+      }, 0.88);
 
       // Canvas fade out
       scrubTl.to(canvas, {
         opacity: 0,
         ease: "power2.inOut",
-        duration: 0.1
-      }, 0.9);
+        duration: 0.08
+      }, 0.88);
 
-      // Statement words appear and change color sequentially
-      scrubTl.to(".hero-statement-word", {
-        opacity: 1,
-        color: "var(--color-fmrg-text)",
-        stagger: 0.02,
-        ease: "none",
-        duration: 0.2
-      }, 1.0);
+      // Subtitle statement appears cleanly with 90% opacity in dark tone
+      scrubTl.to(".hero-statement", {
+        y: 0,
+        opacity: 0.9,
+        ease: "power2.out",
+        duration: 0.08
+      }, 0.90);
     };
 
     setupScroll();
@@ -119,25 +119,44 @@ export default function Home() {
     // 3. (Removed standalone statement section)
 
     // 4. Products Horizontal Scroll with Dynamic Color Transitions
+    const track = document.querySelector(".products-track") as HTMLElement;
+    const calculateDistance = () => {
+      if (!track) return -window.innerWidth * 2.5;
+      return -(track.scrollWidth - window.innerWidth + 80);
+    };
+
     const productsTl = gsap.timeline({
       scrollTrigger: {
         trigger: ".products-section",
         start: "top top",
-        end: "+=200%",
+        end: "+=300%",
         pin: true,
         scrub: 1,
+        invalidateOnRefresh: true,
       }
     });
 
     // Animate the horizontal track
-    productsTl.to(".products-track", { xPercent: -50, ease: "none" }, 0);
+    productsTl.to(".products-track", { 
+      x: calculateDistance, 
+      ease: "none" 
+    }, 0);
     
-    // Dynamic background color transitions
-    // 0 - 0.33 (School -> Mustard)
-    // 0.33 - 0.66 (Healthcare -> Medical Green)
-    // 0.66 - 1.0 (Corporate -> Dark Charcoal)
-    productsTl.to(".products-section", { backgroundColor: "var(--color-fmrg-muted)", color: "var(--color-fmrg-bg)", duration: 0.2 }, 0.3);
-    productsTl.to(".products-section", { backgroundColor: "var(--color-fmrg-text)", color: "var(--color-fmrg-bg)", duration: 0.2 }, 0.6);
+    // Dynamic background color transitions across specific category palettes:
+    // 0.00 -> 0.30: School (#7C4A27 - Warm Amber Ochre)
+    // 0.30 -> 0.65: Healthcare (#163E32 - Deep Restorative Forest Emerald)
+    // 0.65 -> 1.00: Work Wear (#182028 - Executive Tailored Obsidian Slate)
+    productsTl.to(".products-section", { 
+      backgroundColor: "#163E32", 
+      ease: "power2.inOut", 
+      duration: 0.08 
+    }, 0.28);
+
+    productsTl.to(".products-section", { 
+      backgroundColor: "#182028", 
+      ease: "power2.inOut", 
+      duration: 0.08 
+    }, 0.60);
 
     // 5. Superstar Entry (Asymmetric Grid Reveal from Left, Play/Reverse on scroll)
     const superstarTl = gsap.timeline({
@@ -194,56 +213,172 @@ export default function Home() {
           </h1>
         </div>
 
-        <div className="absolute top-[65%] left-0 w-full flex flex-col items-center justify-center z-20 pointer-events-none">
-          <div className="hero-statement text-center px-8 md:px-12 max-w-4xl">
-             <h2 className="font-fmrg-serif text-2xl md:text-4xl text-[var(--color-fmrg-muted)] flex justify-center flex-wrap gap-x-2 md:gap-x-3 gap-y-2">
-              {['Premium', 'uniforms', 'designed', 'for', 'comfort,', 'discipline,', 'and', 'everyday', 'performance.'].map((word, i) => (
-                <span key={i} className="hero-statement-word opacity-0">{word}</span>
-              ))}
+        <div className="absolute top-[63%] md:top-[65%] left-0 w-full flex flex-col items-center justify-center z-20 pointer-events-none">
+          <div className="hero-statement text-center px-8 md:px-12 max-w-4xl opacity-0">
+            <h2 className="font-fmrg-serif text-xl sm:text-2xl md:text-3xl text-[#171717] opacity-90 tracking-wide font-normal leading-relaxed italic">
+              Premium uniforms designed for comfort, discipline, and everyday performance.
             </h2>
           </div>
         </div>
 
       </section>
 
-      {/* 3. PRODUCTS HORIZONTAL SCROLL with dynamic color transitions */}
-      {/* Starts with Mustard color for School */}
-      <section className="products-section relative h-screen w-full bg-[var(--color-fmrg-accent)] text-[var(--color-fmrg-bg)] overflow-hidden flex flex-col justify-center transition-colors duration-300">
+      {/* 3. PRODUCTS HORIZONTAL SCROLL with dynamic specific category colors */}
+      {/* Starts with School (#7C4A27) -> Healthcare (#163E32) -> Work Wear (#182028) */}
+      <section className="products-section relative h-screen w-full bg-[#7C4A27] text-white overflow-hidden flex flex-col justify-center transition-colors duration-500">
         
-        <div className="absolute top-24 md:top-28 left-8 md:left-12 z-20 mix-blend-difference text-white">
-          <h3 className="font-fmrg-serif text-4xl md:text-6xl mb-4">Core Products</h3>
-          <p className="fmrg-nav-link text-white/50">Swipe or scroll to explore our 10 primary garments.</p>
+        {/* Editorial Header */}
+        <div className="absolute top-12 md:top-16 left-8 md:left-14 right-8 md:right-14 z-20 flex flex-col md:flex-row md:items-end justify-between gap-4 pointer-events-none">
+          <div>
+            <div className="flex items-center gap-2.5 mb-2">
+              <span className="w-2 h-2 rounded-full bg-[var(--color-fmrg-highlight)] animate-pulse"></span>
+              <p className="fmrg-nav-link text-white/80 text-xs tracking-[0.2em] uppercase font-semibold">Curated Garment Lineup</p>
+            </div>
+            <h3 className="font-fmrg-serif text-3xl md:text-5xl lg:text-6xl text-white tracking-tight leading-none drop-shadow-sm">
+              Core Products
+            </h3>
+          </div>
+
+          {/* Collection indicator badges */}
+          <div className="flex items-center gap-2 pointer-events-auto">
+            <Link 
+              href="/school-uniforms" 
+              className="px-3.5 py-1.5 rounded-full border border-white/20 bg-black/25 hover:bg-[#8C5229] text-white/90 hover:text-white text-xs tracking-wider uppercase transition-all backdrop-blur-md flex items-center gap-2"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-[#E2B774]"></span>
+              School
+            </Link>
+            <Link 
+              href="/healthcare-uniforms" 
+              className="px-3.5 py-1.5 rounded-full border border-white/20 bg-black/25 hover:bg-[#1A4B3D] text-white/90 hover:text-white text-xs tracking-wider uppercase transition-all backdrop-blur-md flex items-center gap-2"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-[#80CBA8]"></span>
+              Healthcare
+            </Link>
+            <Link 
+              href="/work-wear" 
+              className="px-3.5 py-1.5 rounded-full border border-white/20 bg-black/25 hover:bg-[#222B36] text-white/90 hover:text-white text-xs tracking-wider uppercase transition-all backdrop-blur-md flex items-center gap-2"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-[#CBD5E1]"></span>
+              Work Wear
+            </Link>
+          </div>
         </div>
 
-        {/* 200vw width to hold 10 items comfortably */}
-        <div className="products-track flex h-[60vh] w-[200vw] mt-32 md:mt-40 items-center pl-8 md:pl-12 gap-8 md:gap-16">
+        {/* Dynamic horizontal track with curated core items */}
+        <div className="products-track flex h-[58vh] md:h-[62vh] w-max mt-28 md:mt-32 items-center pl-8 md:pl-14 pr-24 gap-6 md:gap-10">
           
           {[
-            { cat: "School", title: "Boys Shirts & Shorts", img: "/images/products/boys_school_uniform_1789839759243.webp" },
-            { cat: "School", title: "Girls Pinafores", img: "/images/products/girls_school_pinafore_1789839775913.webp" },
-            { cat: "School", title: "Sports Track Pants", img: "/images/products/school_sports_trackpants_1789839789307.webp" },
-            { cat: "School", title: "Winter Waist Coats", img: "/images/products/new_winter_waistcoat.webp" },
-            { cat: "Healthcare", title: "Doctor Lab Coats", img: "/images/products/hospital_doctor_coat_1789887508441.webp" },
-            { cat: "Healthcare", title: "V-Neck Scrub Sets", img: "/images/products/hospital_vneck_scrub_1789887522110.webp" },
-            { cat: "Healthcare", title: "Nurse Tunics", img: "/images/products/hospital_tunics_pants_1789887565362.webp" },
-            { cat: "Healthcare", title: "OT Surgical Wear", img: "/images/products/hospital_ward_boy_1789887617894.webp" },
-            { cat: "Work Wear", title: "Formal Trousers", img: "/images/products/corporate_formal_trousers_1789840370513.webp" },
-            { cat: "Work Wear", title: "Corporate Polo Tees", img: "/images/products/corporate_polo_tees_1789840388961.webp" },
-            { cat: "Work Wear", title: "Executive Shirts", img: "/images/products/hospital_attender_1789887603892.webp" },
-            { cat: "Work Wear", title: "Industrial Overalls", img: "/images/products/hospital_housekeeping_1789887631446.webp" }
+            { 
+              cat: "School", 
+              title: "Primary Girls Skirt & Shirt Set", 
+              desc: "Tailored white short-sleeve shirt with contrast collar trim paired with a box-pleated flared navy skirt in durable wrinkle-resistant fabric.",
+              img: "/images/products/primary_girl_skirt_uniform.jpeg",
+              href: "/school-uniforms",
+              tag: "Pleated Skirt & Shirt",
+              accent: "#E2B774",
+              badge: "bg-[#8C532B]/40 text-[#FCEBD9] border-[#D4A373]/50"
+            },
+            { 
+              cat: "School", 
+              title: "Quad-House Chevron Sports Kit", 
+              desc: "Breathable dry-fit poly-mesh sports jersey featuring sublimated color-coded chevrons and navy sleeves, paired with matching track pants.",
+              img: "/images/products/sports_house_quad_chevron.jpeg",
+              href: "/school-uniforms",
+              tag: "Sublimated Sports Kit",
+              accent: "#E2B774",
+              badge: "bg-[#8C532B]/40 text-[#FCEBD9] border-[#D4A373]/50"
+            },
+            { 
+              cat: "Healthcare", 
+              title: "Consultant Doctor Lab Coat", 
+              desc: "Tailored full-length white medical coat featuring notched lapels, chest pen pocket, deep utility hip pockets, and matching white medical trousers.",
+              img: "/images/products/medical_doctor_full_coat_male.jpeg",
+              href: "/healthcare-uniforms",
+              tag: "Full-Length White Coat",
+              accent: "#80CBA8",
+              badge: "bg-[#1E5242]/40 text-[#D8F3DC] border-[#74C69D]/50"
+            },
+            { 
+              cat: "Healthcare", 
+              title: "Royal Blue V-Neck Scrub Suit", 
+              desc: "Cobalt royal blue scrub top with contrast white neckline piping and dual slant pockets, paired with ergonomic flexible drawstring trousers.",
+              img: "/images/products/medical_royal_blue_scrub_set.jpeg",
+              href: "/healthcare-uniforms",
+              tag: "V-Neck Scrub Suit",
+              accent: "#80CBA8",
+              badge: "bg-[#1E5242]/40 text-[#D8F3DC] border-[#74C69D]/50"
+            },
+            { 
+              cat: "Work Wear", 
+              title: "Corporate Formal Trousers", 
+              desc: "Tailored slim-fit poly-viscose formal trousers with permanent front creases, functional side pockets, and durable belt loops for daily office wear.",
+              img: "/images/products/corporate_formal_trousers_1789840370513.webp",
+              href: "/work-wear",
+              tag: "Tailored Formal Trousers",
+              accent: "#CBD5E1",
+              badge: "bg-[#334155]/40 text-[#F1F5F9] border-[#94A3B8]/50"
+            },
+            { 
+              cat: "Work Wear", 
+              title: "Mercerized Polo T-Shirt", 
+              desc: "Premium combed cotton pique polo shirt with structured rib-knit collar, 2-button placket, and colorfast weave engineered for company branding.",
+              img: "/images/products/corporate_polo_tees_1789840388961.webp",
+              href: "/work-wear",
+              tag: "Pique Cotton Polo",
+              accent: "#CBD5E1",
+              badge: "bg-[#334155]/40 text-[#F1F5F9] border-[#94A3B8]/50"
+            }
           ].map((prod, idx) => (
-            <div key={idx} className="w-[70vw] md:w-[35vw] h-full flex flex-col shrink-0 group">
-              <div className="w-full h-[85%] mb-6 flex items-center justify-center overflow-hidden relative border border-black/10 shadow-xl bg-black">
-                <img src={prod.img} alt={prod.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100" />
-                <span className="absolute font-fmrg-sans text-[8rem] text-white/30 font-black -left-4 bottom-4 drop-shadow-lg mix-blend-overlay">0{idx+1}</span>
-              </div>
-              <div className="flex justify-between items-start mix-blend-difference text-white">
-                <div>
-                  <h4 className="font-fmrg-serif text-2xl md:text-3xl mb-2">{prod.title}</h4>
-                  <span className="fmrg-nav-link opacity-60">{prod.cat}</span>
+            <Link 
+              href={prod.href}
+              key={idx} 
+              className="w-[74vw] sm:w-[48vw] md:w-[30vw] lg:w-[24vw] h-full flex flex-col shrink-0 group select-none cursor-pointer"
+            >
+              <div className="w-full h-[76%] mb-3 flex items-center justify-center overflow-hidden relative rounded-sm border border-white/15 shadow-2xl bg-black/40 backdrop-blur-xs transition-all duration-500 group-hover:border-white/40 group-hover:shadow-[0_25px_50px_rgba(0,0,0,0.45)]">
+                <img 
+                  src={prod.img} 
+                  alt={prod.title} 
+                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 opacity-90 group-hover:opacity-100" 
+                />
+                
+                {/* Specific colored category badge */}
+                <div className="absolute top-4 left-4 z-10">
+                  <span className={`px-2.5 py-1 rounded-full text-[10px] tracking-wider uppercase font-medium border backdrop-blur-md ${prod.badge}`}>
+                    {prod.cat}
+                  </span>
+                </div>
+
+                {/* Specific garment detail chip */}
+                <div className="absolute top-4 right-4 z-10">
+                  <span className="px-2 py-0.5 rounded text-[10px] tracking-wide text-white/80 bg-black/60 backdrop-blur-md border border-white/10 font-sans">
+                    {prod.tag}
+                  </span>
+                </div>
+
+                {/* View link indicator on hover */}
+                <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                  <span className="text-[11px] uppercase tracking-wider text-white font-medium bg-white/20 backdrop-blur-md px-3 py-1 rounded-full border border-white/30">
+                    Explore →
+                  </span>
                 </div>
               </div>
-            </div>
+
+              {/* Title & metadata */}
+              <div className="flex flex-col text-white">
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="fmrg-nav-link text-[10px] text-white/60 uppercase tracking-widest">{prod.cat}</span>
+                  <span className="text-white/30">•</span>
+                  <span className="text-[11px] text-white/80 font-mono tracking-wide">{prod.tag}</span>
+                </div>
+                <h4 className="font-fmrg-serif text-lg md:text-xl text-white group-hover:text-[var(--color-fmrg-highlight)] transition-colors duration-300 line-clamp-1">
+                  {prod.title}
+                </h4>
+                <p className="text-xs text-white/70 font-sans mt-1 line-clamp-2 leading-relaxed">
+                  {prod.desc}
+                </p>
+              </div>
+            </Link>
           ))}
 
         </div>

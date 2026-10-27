@@ -1,25 +1,30 @@
 @import "tailwindcss";
 
 @theme {
-  --color-fmrg-bg: #E8E3D9;
-  --color-fmrg-text: #2C241B;
-  --color-fmrg-accent: #2E472D;
-  --color-fmrg-muted: #CC5A3A;
+  --color-fmrg-bg: #FAF8F5;
+  --color-fmrg-text: #171717;
+  --color-fmrg-accent: #8E6B3E;
+  --color-fmrg-muted: #6E665D;
+  --color-fmrg-highlight: #C5A880;
   
+  --color-category-school: #7C4A27;
+  --color-category-healthcare: #163E32;
+  --color-category-workwear: #182028;
+
   --font-serif: 'Playfair Display', serif;
   --font-sans: 'Inter', sans-serif;
 }
 
 :root {
-  --background: #E8E3D9;
-  --foreground: #2C241B;
+  --background: #FAF8F5;
+  --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
-  /* FMRG typically forces light mode or a very specific dark mode, but we will keep their exact earthy aesthetic forced */
+  /* Elegant uniform atelier aesthetic */
   :root {
-    --background: #E8E3D9;
-    --foreground: #2C241B;
+    --background: #FAF8F5;
+    --foreground: #171717;
   }
 }
 

@@ -50,7 +50,7 @@ export default function Navigation() {
       
       <div className={`hidden md:flex gap-8 items-center shrink-0 z-10 transition-opacity duration-700 ${showLinks ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
         <Link href="/about" className="fmrg-nav-link hover:opacity-50 transition-opacity">About</Link>
-        <Link href="/contact" className="fmrg-nav-link hover:opacity-50 transition-opacity text-fmrg-muted">Contact</Link>
+        <Link href="/contact" className="fmrg-nav-link hover:opacity-50 transition-opacity font-semibold">Contact</Link>
       </div>
       
       {/* Mobile Hamburger */}

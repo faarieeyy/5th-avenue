@@ -25,6 +25,6 @@ export default function NoiseOverlay() {
   }, [pathname]);
 
   return (
-    <div className={`noise-overlay transition-opacity duration-700 pointer-events-none z-[9999] ${visible ? 'opacity-40' : 'opacity-0'}`}></div>
+    <div className={`noise-overlay transition-opacity duration-700 pointer-events-none z-[9999] ${visible ? 'opacity-20' : 'opacity-0'}`}></div>
   );
 }
