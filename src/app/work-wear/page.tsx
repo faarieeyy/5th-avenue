@@ -155,26 +155,29 @@ export default function WorkWear() {
       {/* 1. DYNAMIC PARALLAX HERO - Executive Obsidian & Slate Theme */}
       <section className="workwear-hero relative h-screen w-full overflow-hidden flex items-center justify-center bg-[#0B0F17]">
         
-        {/* Floating Editorial Images with cool slate ambient shadows */}
+        {/* Floating Editorial Images with cool slate ambient shadows (100% fully visible) */}
         <div className="absolute inset-0 w-full h-full pointer-events-none">
-          <img 
-            src="/images/products/corporate_formal_trousers_1789840370513.webp" 
-            className="parallax-img absolute top-[18%] left-[2%] md:left-[5%] w-48 md:w-80 aspect-[3/4] object-cover opacity-85 shadow-2xl rounded-sm border border-slate-700/50" 
-            data-speed="1.2" 
-            alt="Executive Charcoal Suiting"
-          />
-          <img 
-            src="/images/products/new_winter_waistcoat.webp" 
-            className="parallax-img absolute top-[38%] right-[2%] md:right-[5%] w-56 md:w-96 aspect-[3/4] object-cover opacity-85 shadow-2xl rounded-sm border border-slate-700/50" 
-            data-speed="0.8" 
-            alt="Tailored Waistcoat Hospitality Duo"
-          />
-          <img 
-            src="/images/products/corporate_polo_tees_1789840388961.webp" 
-            className="parallax-img absolute top-[72%] left-[15%] md:left-[25%] w-64 md:w-[30rem] aspect-[4/5] object-cover opacity-85 shadow-2xl rounded-sm border border-slate-700/50" 
-            data-speed="1.5" 
-            alt="Smart Casual Corporate Polo"
-          />
+          <div className="parallax-img absolute top-[14%] left-[2%] md:left-[5%] w-44 md:w-72 aspect-[3/4] p-2 bg-slate-900/70 backdrop-blur-md shadow-2xl rounded-2xl border border-slate-700/60 flex items-center justify-center overflow-hidden" data-speed="1.2">
+            <img 
+              src="/images/products/corporate_formal_trousers_1789840370513.webp" 
+              className="w-full h-full object-contain" 
+              alt="Executive Charcoal Suiting"
+            />
+          </div>
+          <div className="parallax-img absolute top-[40%] right-[2%] md:right-[5%] w-52 md:w-88 aspect-[3/4] p-2 bg-slate-900/70 backdrop-blur-md shadow-2xl rounded-2xl border border-slate-700/60 flex items-center justify-center overflow-hidden" data-speed="0.8">
+            <img 
+              src="/images/products/new_winter_waistcoat.webp" 
+              className="w-full h-full object-contain" 
+              alt="Tailored Waistcoat Hospitality Duo"
+            />
+          </div>
+          <div className="parallax-img absolute top-[70%] left-[15%] md:left-[25%] w-56 md:w-96 aspect-[3/4] p-2 bg-slate-900/70 backdrop-blur-md shadow-2xl rounded-2xl border border-slate-700/60 flex items-center justify-center overflow-hidden" data-speed="1.5">
+            <img 
+              src="/images/products/corporate_polo_tees_1789840388961.webp" 
+              className="w-full h-full object-contain" 
+              alt="Smart Casual Corporate Polo"
+            />
+          </div>
         </div>
 
         {/* Ambient Subtle Cool Glow */}
@@ -305,17 +308,15 @@ export default function WorkWear() {
                   </div>
                 </div>
 
-                {/* Image Content with Executive Obsidian Border Frame */}
-                <div className="w-full lg:w-5/12 aspect-[4/5] relative overflow-hidden bg-slate-200 shadow-2xl rounded-lg border border-slate-300 group">
+                {/* Image Content with Clean White Frame (100% Fully Shown with object-contain) */}
+                <div className="w-full lg:w-5/12 aspect-[3/4] md:aspect-[4/5] relative overflow-hidden bg-white shadow-xl rounded-2xl border border-slate-200 p-4 flex items-center justify-center group">
                   <img 
                     src={p.img} 
                     alt={p.title} 
-                    className="product-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                    className="product-image w-full h-full object-contain filter drop-shadow-md transition-transform duration-700 group-hover:scale-105" 
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <p className="text-white text-xs font-mono tracking-wider">
-                      {p.role}
-                    </p>
+                  <div className="absolute bottom-4 left-4 bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded-full text-white text-[11px] font-mono tracking-wider border border-white/20">
+                    {p.role.split("·")[0]}
                   </div>
                 </div>
                 

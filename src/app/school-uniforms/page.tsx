@@ -59,7 +59,6 @@ export default function SchoolUniforms() {
 
   // Update product section animations when category changes
   useEffect(() => {
-    // Refresh ScrollTrigger after DOM updates
     const timer = setTimeout(() => {
       ScrollTrigger.refresh();
     }, 100);
@@ -77,7 +76,7 @@ export default function SchoolUniforms() {
       desc: "Ultra-soft, breathable fabrics with easy-on closures and playful flexibility engineered specifically for young toddlers.",
       highlight: "Ages 3 – 5",
       img: "/images/products/kindergarten_activity_wear.jpeg",
-      color: "#8C5229"
+      color: "#1E3A8A"
     },
     {
       id: "primary",
@@ -87,7 +86,7 @@ export default function SchoolUniforms() {
       desc: "Designed for Class 1 to 5 students. Heavy-duty reinforced stitching, stain-resistant fabrics, and smart comfort tailored for young explorers.",
       highlight: "Classes 1 – 5",
       img: "/images/products/primary_girl_skirt_uniform.jpeg",
-      color: "#7C4A27"
+      color: "#1E40AF"
     },
     {
       id: "secondary",
@@ -97,7 +96,7 @@ export default function SchoolUniforms() {
       desc: "A transition toward mature discipline. Crisp anti-wrinkle shirts, permanently pressed knife-pleats, and structured tartan trousers.",
       highlight: "Classes 6 – 10",
       img: "/images/products/secondary_boys_plaid_trousers.jpeg",
-      color: "#163E32"
+      color: "#0F172A"
     },
     {
       id: "senior",
@@ -107,7 +106,7 @@ export default function SchoolUniforms() {
       desc: "Refined, executive cuts in rich earth-toned fabrics, custom-embroidered beige waistcoats, and knife-pleated skirts for senior scholars.",
       highlight: "Classes 11 & 12",
       img: "/images/products/senior_earthy_waistcoat_skirt.jpeg",
-      color: "#6B4C35"
+      color: "#334155"
     },
     {
       id: "accessories",
@@ -117,37 +116,37 @@ export default function SchoolUniforms() {
       desc: "Ergonomic spinal-support school bags, jacquard crest ties, embossed leather belts, and cotton socks completing the uniform.",
       highlight: "Gear & Accessories",
       img: "/images/products/school_bag_1789884884376.webp",
-      color: "#3D4852"
+      color: "#1E293B"
     },
     {
       id: "merchandise",
       number: "06",
       title: "My School My Pride",
-      covers: "School merchandise",
-      desc: "Celebrate school spirit with varsity jackets, heavyweight brushed hoodies, custom crest caps, and alumni celebration apparel.",
+      covers: "School merchandise & campus identity",
+      desc: "Celebrate school spirit with varsity crest polos, heavyweight combed cotton apparel, custom crest caps, and alumni celebration gear.",
       highlight: "Campus Identity",
       img: "/images/products/corporate_polo_tees_1789840388961.webp",
-      color: "#523B2D"
+      color: "#1E3A8A"
     },
     {
       id: "hostel",
       number: "07",
       title: "Good Dress Equals Good Night!",
-      covers: "Hostel uniforms & cozy nightwear",
-      desc: "Cozy, breathable 100% natural cotton pajama sets and evening lounge wear ensuring restful sleep and comfort in student dormitories.",
+      covers: "Hostel uniforms & residential activewear",
+      desc: "Cozy, breathable 100% natural cotton raglan sets and lounge wear ensuring restful comfort in student dormitories and study halls.",
       highlight: "Residential & Boarding",
       img: "/images/products/school_tshirt_1789884872133.webp",
-      color: "#3A4D45"
+      color: "#0284C7"
     },
     {
       id: "house",
       number: "08",
       title: "Up for a Match?",
       covers: "School house uniforms",
-      desc: "Vibrant colorfast house polo tees, matching athletic shorts, and competition sashes uniting students under their house colors.",
+      desc: "Vibrant colorfast house polo tees, matching athletic shorts, and competition kits uniting students under their house colors.",
       highlight: "Inter-House Pride",
       img: "/images/products/sports_house_quad_chevron.jpeg",
-      color: "#854F28"
+      color: "#D97706"
     },
     {
       id: "sports",
@@ -157,7 +156,7 @@ export default function SchoolUniforms() {
       desc: "High-performance moisture-wicking jerseys and 4-way articulated knee track pants engineered for speed, agility, and sports days.",
       highlight: "Athletics & PE",
       img: "/images/products/sports_hockey_chevron_girls.jpeg",
-      color: "#1E3B2E"
+      color: "#059669"
     }
   ];
 
@@ -168,7 +167,7 @@ export default function SchoolUniforms() {
       categoryId: "kindergarten",
       categoryTitle: "A Day at the Kindergarten!",
       categoryCover: "Pre-primary school uniforms",
-      desc: "Elegantly tailored frocks and pinafores designed for young girls. Combining gentle, hypoallergenic cotton blends with Peter Pan collar shirts for effortless classroom comfort.",
+      desc: "Elegantly tailored frocks and pinafores designed for young girls. Combining gentle, hypoallergenic combed cotton blends with Peter Pan collar shirts for effortless classroom comfort.",
       quote: "Gentle comfort for their very first school steps.",
       img: "/images/products/kindergarten_girl_pinafore.jpeg",
       details: "100% Breathable Combed Cotton · Hypoallergenic · Skin-Friendly"
@@ -258,33 +257,33 @@ export default function SchoolUniforms() {
       categoryId: "sports",
       categoryTitle: "For the Love of Sports",
       categoryCover: "Sports uniforms (Girls Field Hockey & Athletics)",
-      desc: "High-performance sports uniform engineered specifically for field hockey, track & field, and team sports. Features a sunset-gradient multi-tone chevron graphic with navy raglan sleeves and breathable underarm panels, paired with flexible performance navy track pants designed for swift sprints and agile footwork.",
-      quote: "Discipline builds brighter tomorrows — empowering young athletes on every turf.",
+      desc: "Girls Play Stronger series. High-visibility yellow performance raglan polo t-shirt with navy contrast sleeves and sublimated dynamic chest chevrons, paired with flexible navy sports track pants engineered for freedom on the court and hockey field.",
+      quote: "Empowering young athletes to move faster, play harder, and lead.",
       img: "/images/products/sports_hockey_chevron_girls.jpeg",
-      details: "High-Ventilation Mesh Body · Anti-Chafe Raglan Cut · 4-Way Stretch Ankle Zips"
+      details: "Moisture-Wicking Micro-Pique · Ergonomic Raglan Cut · High-Stretch Athletic Track Pants"
     },
     { 
-      title: "Varsity Court Polo & Navy Athletic Track Pants", 
+      title: "Varsity Court Athletic Polo & Track Pants", 
       categoryId: "sports",
       categoryTitle: "For the Love of Sports",
-      categoryCover: "Sports uniforms (Court Sports & PE)",
-      desc: "Vibrant golden-sun performance sports polo shirt featuring a reinforced flat-knit collar, 2-button placket, and embroidered school crest, paired with athletic navy track pants featuring contrast white side piping. Designed for court agility across basketball, tennis, badminton, and daily physical training.",
-      quote: "Dynamic court presence engineered for speed, comfort, and everyday agility.",
+      categoryCover: "Sports uniforms (Basketball & Court Agility)",
+      desc: "Vibrant yellow collared athletic polo t-shirt featuring contrast navy sleeve ribbing and side panels, matched with breathable navy track pants with double-piped white side racing stripes for physical education and basketball tournaments.",
+      quote: "Dynamic court agility with dry-fit cooling technology.",
       img: "/images/products/sports_basketball_yellow_polo.jpeg",
-      details: "Breathable Honeycomb Pique · Ribbed Lay-Flat Collar · Heavy-Duty Contrast Piping"
+      details: "Dry-Fit Micro-Mesh Poly · Shape-Retaining Collar · Contrast Side Racing Stripes"
     },
     { 
-      title: "Primary Four-House Sports Polos & Athletic Shorts", 
+      title: "Primary Four-House Athletic Pique Polos", 
       categoryId: "house",
       categoryTitle: "Up for a Match?",
-      categoryCover: "School house uniforms (Primary 1st to 5th Standard)",
-      desc: "Classic four-house athletic kits featuring color-fast pique polos in Royal Blue, Canary Yellow, Scarlet Red, and Emerald Green with custom embroidered Perks Public School crests. Paired with comfortable, hard-wearing navy athletic shorts tailored for active young athletes.",
-      quote: "Instilling camaraderie, sportsmanship, and house pride from day one.",
+      categoryCover: "School house uniforms (Junior Primary 1st to 5th)",
+      desc: "Four-color junior house pique polos in vibrant Red, Emerald Green, Royal Blue, and Golden Yellow. Features structured contrast tipping on collars and cuffs, engineered with colorfast dyes that never fade across repeated sports day wash cycles.",
+      quote: "Uniting young learners in team spirit, camaraderie, and friendly competition.",
       img: "/images/products/sports_primary_house_quad_polos.jpeg",
-      details: "100% Colorfast Reactive Dyes · Reinforced Button Placket · Dual-Pocket Athletic Shorts"
+      details: "100% Colorfast Reactive Dyes · Breathable Pique Weave · Anti-Chafing Flat Seams"
     },
     { 
-      title: "Turf Soccer & Athletics V-Neck Performance Jersey", 
+      title: "Turf Soccer Aerocool Jersey & Performance Pants", 
       categoryId: "sports",
       categoryTitle: "For the Love of Sports",
       categoryCover: "Sports uniforms (Soccer, Turf & Sprinting)",
@@ -370,60 +369,89 @@ export default function SchoolUniforms() {
     : products.filter(p => p.categoryId === selectedCategory);
 
   return (
-    <main ref={containerRef} className="bg-[var(--color-fmrg-bg)] text-[var(--color-fmrg-text)] relative min-h-screen">
+    <main ref={containerRef} className="bg-[#F8FAFC] text-[#0F172A] relative min-h-screen">
       
-      {/* 1. DYNAMIC PARALLAX HERO */}
-      <section className="school-hero relative h-screen w-full overflow-hidden flex items-center justify-center bg-[#FAF8F5]">
+      {/* 1. DYNAMIC PARALLAX HERO - Oxford Collegiate Navy & Academic Gold */}
+      <section className="school-hero relative h-screen w-full overflow-hidden flex items-center justify-center bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#1E3A8A] text-white">
         
-        {/* Floating Editorial Images */}
+        {/* Floating Editorial Images (100% fully visible with object-contain, no heads cropped) */}
         <div className="absolute inset-0 w-full h-full pointer-events-none">
-          <img src="/images/products/kindergarten_girl_pinafore.jpeg" className="parallax-img absolute top-[18%] left-[2%] md:left-[5%] w-48 md:w-80 aspect-[3/4] object-cover opacity-90 shadow-2xl rounded-sm" data-speed="1.2" alt="Kindergarten Pinafore" />
-          <img src="/images/products/kindergarten_activity_wear.jpeg" className="parallax-img absolute top-[38%] right-[2%] md:right-[5%] w-56 md:w-96 aspect-[3/4] object-cover opacity-90 shadow-2xl rounded-sm" data-speed="0.8" alt="Kindergarten Activity Wear" />
-          <img src="/images/products/kindergarten_boy_shorts.jpeg" className="parallax-img absolute top-[72%] left-[15%] md:left-[25%] w-64 md:w-[30rem] aspect-[4/5] object-cover opacity-90 shadow-2xl rounded-sm" data-speed="1.5" alt="Kindergarten Plaid Shorts" />
+          <div className="parallax-img absolute top-[14%] left-[3%] md:left-[5%] w-44 md:w-72 aspect-[3/4] p-2 bg-white/15 backdrop-blur-md shadow-2xl rounded-2xl border border-white/25 flex items-center justify-center overflow-hidden" data-speed="1.2">
+            <img 
+              src="/images/products/kindergarten_girl_pinafore.jpeg" 
+              className="w-full h-full object-contain" 
+              alt="Kindergarten Pinafore" 
+            />
+          </div>
+          <div className="parallax-img absolute top-[40%] right-[3%] md:right-[6%] w-52 md:w-84 aspect-[3/4] p-2 bg-white/15 backdrop-blur-md shadow-2xl rounded-2xl border border-white/25 flex items-center justify-center overflow-hidden" data-speed="0.8">
+            <img 
+              src="/images/products/kindergarten_activity_wear.jpeg" 
+              className="w-full h-full object-contain" 
+              alt="Kindergarten Activity Wear" 
+            />
+          </div>
+          <div className="parallax-img absolute top-[70%] left-[16%] md:left-[24%] w-56 md:w-96 aspect-[3/4] p-2 bg-white/15 backdrop-blur-md shadow-2xl rounded-2xl border border-white/25 flex items-center justify-center overflow-hidden" data-speed="1.5">
+            <img 
+              src="/images/products/kindergarten_boy_shorts.jpeg" 
+              className="w-full h-full object-contain" 
+              alt="Kindergarten Plaid Shorts" 
+            />
+          </div>
         </div>
 
         {/* Massive Editorial Typography */}
-        <div className="relative z-10 mix-blend-difference text-white text-center w-full px-4">
+        <div className="relative z-10 text-center w-full px-4">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 border border-white/30 mb-6 backdrop-blur-md shadow-sm">
+            <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+            <span className="text-xs uppercase tracking-[0.25em] text-amber-300 font-semibold font-mono">
+              Academy & Campus Uniform Atelier
+            </span>
+          </div>
+
           <h1 className="reveal-text font-fmrg-serif flex flex-col items-center justify-center">
-             <span className="text-[18vw] leading-[0.85] tracking-tighter uppercase block overflow-hidden">
+             <span className="text-[16vw] md:text-[14vw] leading-[0.85] tracking-tighter uppercase block overflow-hidden text-white drop-shadow-md">
                <SplitText text="SCHOOL" />
              </span>
-             <span className="text-[5vw] md:text-[4vw] italic lowercase font-light block mt-4 tracking-wide overflow-hidden opacity-90">
+             <span className="text-[5vw] md:text-[3.8vw] italic lowercase font-light block mt-4 tracking-wide overflow-hidden text-amber-300 font-serif">
                <SplitText text="built for kids." />
              </span>
           </h1>
+
+          <p className="mt-8 max-w-xl mx-auto text-slate-200 font-fmrg-sans text-sm md:text-base leading-relaxed">
+            Durable, hypoallergenic, and disciplined school uniforms designed across all 9 academic stages from kindergarten explorations to proud senior house tournaments.
+          </p>
         </div>
 
-        {/* Subtle Scroll Down Prompt */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 text-white mix-blend-difference pointer-events-none">
-          <span className="text-[11px] uppercase tracking-[0.2em] opacity-70">Explore Lookbook</span>
-          <span className="w-px h-8 bg-white/50 animate-pulse"></span>
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 text-slate-300 pointer-events-none">
+          <span className="text-[10px] uppercase tracking-[0.25em] font-mono text-slate-300">Explore Lookbook</span>
+          <span className="w-px h-8 bg-gradient-to-b from-amber-400 to-transparent animate-pulse"></span>
         </div>
       </section>
 
 
-      {/* 2. THE SCHOOL LOOKBOOK CATEGORIES SHOWCASE (User's Exact Categorization Table) */}
-      <section className="py-24 md:py-32 px-8 md:px-14 max-w-[100rem] mx-auto border-b border-black/10">
+      {/* 2. THE SCHOOL LOOKBOOK CATEGORIES SHOWCASE */}
+      <section className="py-24 md:py-32 px-8 md:px-14 max-w-[100rem] mx-auto border-b border-slate-200">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-3 mb-3">
-              <span className="w-2.5 h-2.5 rounded-full bg-[var(--color-fmrg-accent)]"></span>
-              <span className="fmrg-nav-link text-[var(--color-fmrg-accent)] text-xs tracking-[0.25em] font-semibold uppercase">
+            <div className="flex items-center gap-2.5 mb-3">
+              <span className="w-2 h-2 rounded-full bg-blue-600"></span>
+              <span className="text-blue-700 text-xs tracking-[0.25em] font-bold uppercase font-mono">
                 Curated Range Directory
               </span>
             </div>
-            <h2 className="font-fmrg-serif text-4xl md:text-6xl text-[var(--color-fmrg-text)] tracking-tight">
+            <h2 className="font-fmrg-serif text-3xl md:text-5xl text-slate-900 tracking-tight">
               The School Lookbook
             </h2>
-            <p className="font-fmrg-sans text-lg md:text-xl text-[var(--color-fmrg-muted)] mt-4 leading-relaxed">
+            <p className="font-fmrg-sans text-base md:text-lg text-slate-600 mt-4 leading-relaxed">
               Explore our 9 specialized categories covering every stage of student life — from joyful first steps in kindergarten to proud senior house matches and restful hostel nights.
             </p>
           </div>
 
           <div className="flex items-center gap-2 self-start md:self-end">
-            <span className="text-xs uppercase tracking-widest text-[var(--color-fmrg-muted)] font-mono">
+            <span className="text-xs uppercase tracking-widest text-slate-500 font-mono px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200">
               09 Dedicated Look Book Ranges
             </span>
           </div>
@@ -431,7 +459,7 @@ export default function SchoolUniforms() {
 
         {/* 9 Look Book Cards Grid */}
         <div className="lookbook-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {lookBookCategories.map((cat, idx) => {
+          {lookBookCategories.map((cat) => {
             const isSelected = selectedCategory === cat.id;
             return (
               <div
@@ -440,40 +468,39 @@ export default function SchoolUniforms() {
                   setSelectedCategory(isSelected ? "all" : cat.id);
                   document.getElementById("catalog-filter")?.scrollIntoView({ behavior: "smooth" });
                 }}
-                className={`lookbook-card group relative cursor-pointer overflow-hidden rounded-xl border p-7 md:p-8 transition-all duration-500 flex flex-col justify-between ${
+                className={`lookbook-card group relative cursor-pointer overflow-hidden rounded-2xl border p-7 md:p-8 transition-all duration-500 flex flex-col justify-between ${
                   isSelected 
-                    ? "bg-[#3B2212] text-white border-[#3B2212] shadow-2xl scale-[1.02]" 
-                    : "bg-white hover:bg-[#FAF6F0] text-[var(--color-fmrg-text)] border-black/10 hover:border-[#7C4A27]/40 hover:shadow-xl"
+                    ? "bg-[#0F172A] text-white border-[#0F172A] shadow-2xl scale-[1.02]" 
+                    : "bg-white hover:bg-slate-50/80 text-slate-900 border-slate-200 hover:border-blue-400 hover:shadow-xl"
                 }`}
               >
                 <div>
                   {/* Top Bar with Number & Highlight Tag */}
                   <div className="flex items-center justify-between mb-6">
-                    <span className={`font-mono text-sm tracking-widest font-bold ${isSelected ? "text-[var(--color-fmrg-highlight)]" : "text-[var(--color-fmrg-accent)]"}`}>
+                    <span className={`font-mono text-sm tracking-widest font-bold ${isSelected ? "text-amber-400" : "text-blue-600"}`}>
                       {cat.number}
                     </span>
                     <span className={`text-[10px] tracking-widest uppercase font-semibold px-2.5 py-1 rounded-full border ${
                       isSelected 
-                        ? "bg-white/10 text-white border-white/20" 
-                        : "bg-[#7C4A27]/10 text-[#7C4A27] border-[#7C4A27]/20"
+                        ? "bg-amber-400/20 text-amber-300 border-amber-400/40" 
+                        : "bg-blue-50 text-blue-700 border-blue-200"
                     }`}>
                       {cat.highlight}
                     </span>
                   </div>
 
-                  {/* Category Visual Preview */}
-                  <div className="relative w-full aspect-[16/10] mb-5 overflow-hidden rounded-lg bg-black/5 shadow-inner">
+                  {/* Category Visual Preview (Full image displayed with object-contain) */}
+                  <div className="relative w-full aspect-[16/10] mb-5 overflow-hidden rounded-xl bg-slate-100 border border-slate-200 p-2 flex items-center justify-center">
                     <img 
                       src={cat.img} 
                       alt={cat.title} 
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                      className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105" 
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60"></div>
                   </div>
 
                   {/* Look Book Category Title */}
                   <h3 className={`font-fmrg-serif text-2xl md:text-3xl mb-2 transition-colors ${
-                    isSelected ? "text-white" : "group-hover:text-[var(--color-fmrg-accent)]"
+                    isSelected ? "text-white" : "group-hover:text-blue-700"
                   }`}>
                     {cat.title}
                   </h3>
@@ -481,7 +508,7 @@ export default function SchoolUniforms() {
                   {/* What it Covers */}
                   <div className="mb-4">
                     <span className={`inline-block text-xs uppercase tracking-wider font-semibold ${
-                      isSelected ? "text-amber-200/90" : "text-[#7C4A27]"
+                      isSelected ? "text-amber-300" : "text-blue-700"
                     }`}>
                       ✦ {cat.covers}
                     </span>
@@ -489,21 +516,21 @@ export default function SchoolUniforms() {
 
                   {/* Description */}
                   <p className={`font-fmrg-sans text-sm leading-relaxed mb-6 ${
-                    isSelected ? "text-white/80" : "text-gray-600"
+                    isSelected ? "text-slate-300" : "text-slate-600"
                   }`}>
                     {cat.desc}
                   </p>
                 </div>
 
                 {/* Footer Action */}
-                <div className="pt-4 border-t border-black/5 flex items-center justify-between">
+                <div className={`pt-4 border-t flex items-center justify-between ${isSelected ? "border-slate-800" : "border-slate-100"}`}>
                   <span className={`text-xs font-medium uppercase tracking-wider ${
-                    isSelected ? "text-[var(--color-fmrg-highlight)]" : "text-gray-500 group-hover:text-[var(--color-fmrg-accent)]"
+                    isSelected ? "text-amber-400 font-semibold" : "text-slate-500 group-hover:text-blue-600"
                   }`}>
                     {isSelected ? "Showing Range Items ✓" : "View Collection Range →"}
                   </span>
-                  <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs transition-transform group-hover:translate-x-1 ${
-                    isSelected ? "bg-white text-black" : "bg-black/5 text-gray-700"
+                  <span className={`w-7 h-7 rounded-full flex items-center justify-center text-xs transition-transform group-hover:translate-x-1 ${
+                    isSelected ? "bg-amber-400 text-slate-950 font-bold" : "bg-blue-50 text-blue-700"
                   }`}>
                     →
                   </span>
@@ -517,19 +544,19 @@ export default function SchoolUniforms() {
 
 
       {/* 2.5 SPECIAL ATHLETICS & SPORTS WEAR SHOWCASE */}
-      <section className="py-20 md:py-24 px-8 md:px-14 max-w-[100rem] mx-auto border-b border-black/10 bg-gradient-to-b from-[#FAF8F5] via-[#F4EFE6]/60 to-[#FAF8F5]">
+      <section className="py-20 md:py-24 px-8 md:px-14 max-w-[100rem] mx-auto border-b border-slate-200 bg-gradient-to-b from-slate-50 via-blue-50/30 to-slate-50">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
-            <div className="flex items-center gap-3 mb-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#1E3B2E]"></span>
-              <span className="text-[#1E3B2E] text-xs tracking-[0.25em] font-semibold uppercase font-fmrg-sans">
+            <div className="flex items-center gap-2.5 mb-2">
+              <span className="w-2 h-2 rounded-full bg-blue-600"></span>
+              <span className="text-blue-700 text-xs tracking-[0.25em] font-bold uppercase font-mono">
                 Official School Sports & House Wear
               </span>
             </div>
-            <h2 className="font-fmrg-serif text-3xl md:text-5xl text-[var(--color-fmrg-text)] tracking-tight">
+            <h2 className="font-fmrg-serif text-3xl md:text-5xl text-slate-900 tracking-tight">
               Play · Learn · Grow Together
             </h2>
-            <p className="font-fmrg-sans text-base md:text-lg text-[var(--color-fmrg-muted)] mt-2 max-w-2xl">
+            <p className="font-fmrg-sans text-base md:text-lg text-slate-600 mt-2 max-w-2xl">
               Engineered with moisture-wicking poly-mesh fabrics, vibrant sublimated chevrons, and flexible track pants for school houses, athletics meets, and campus tournaments.
             </p>
           </div>
@@ -540,7 +567,7 @@ export default function SchoolUniforms() {
                 setSelectedCategory("sports");
                 document.getElementById("catalog-filter")?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="px-5 py-2.5 rounded-full text-xs uppercase tracking-wider font-semibold bg-[#1E3B2E] text-white hover:bg-[#2A5240] transition-all shadow-md"
+              className="px-5 py-2.5 rounded-full text-xs uppercase tracking-wider font-semibold bg-blue-700 text-white hover:bg-blue-800 transition-all shadow-md"
             >
               Filter Sports Wear Range →
             </button>
@@ -549,14 +576,14 @@ export default function SchoolUniforms() {
                 setSelectedCategory("house");
                 document.getElementById("catalog-filter")?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="px-5 py-2.5 rounded-full text-xs uppercase tracking-wider font-semibold bg-[#7C4A27] text-white hover:bg-[#8F562E] transition-all shadow-md"
+              className="px-5 py-2.5 rounded-full text-xs uppercase tracking-wider font-semibold bg-amber-500 text-slate-950 hover:bg-amber-400 transition-all shadow-md"
             >
               Filter House Kits →
             </button>
           </div>
         </div>
 
-        {/* 5-Card High Impact Visual Strip */}
+        {/* 5-Card High Impact Visual Strip (Full image visible with object-contain) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
           {[
             {
@@ -601,28 +628,28 @@ export default function SchoolUniforms() {
                 setSelectedCategory(item.catId);
                 document.getElementById("catalog-filter")?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="group cursor-pointer rounded-xl overflow-hidden bg-white border border-black/10 hover:border-black/30 hover:shadow-xl transition-all duration-300 flex flex-col"
+              className="group cursor-pointer rounded-2xl overflow-hidden bg-white border border-slate-200 hover:border-blue-400 hover:shadow-xl transition-all duration-300 flex flex-col p-3"
             >
-              <div className="aspect-[3/4] overflow-hidden relative bg-gray-100">
+              <div className="aspect-[3/4] overflow-hidden relative rounded-xl bg-slate-50 flex items-center justify-center p-2">
                 <img
                   src={item.img}
                   alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
                 />
-                <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] uppercase tracking-wider font-semibold bg-black/70 backdrop-blur-md text-white border border-white/20">
+                <span className="absolute top-2 left-2 px-2.5 py-1 rounded-full text-[10px] uppercase tracking-wider font-semibold bg-slate-900/80 backdrop-blur-md text-white border border-white/20">
                   {item.tag}
                 </span>
               </div>
-              <div className="p-4 flex flex-col flex-1 justify-between bg-white">
+              <div className="pt-3 pb-1 flex flex-col flex-1 justify-between">
                 <div>
-                  <h4 className="font-fmrg-serif text-base text-gray-900 group-hover:text-[var(--color-fmrg-accent)] transition-colors leading-snug">
+                  <h4 className="font-fmrg-serif text-base text-slate-900 group-hover:text-blue-700 transition-colors leading-snug">
                     {item.title}
                   </h4>
-                  <p className="text-xs text-gray-500 mt-1 line-clamp-1">
+                  <p className="text-xs text-slate-500 mt-1 line-clamp-1">
                     {item.subtitle}
                   </p>
                 </div>
-                <span className="text-[11px] uppercase tracking-wider font-semibold text-[var(--color-fmrg-accent)] mt-3 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                <span className="text-[11px] uppercase tracking-wider font-semibold text-blue-600 mt-3 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
                   View in Catalog →
                 </span>
               </div>
@@ -633,19 +660,19 @@ export default function SchoolUniforms() {
 
 
       {/* 3. INTERACTIVE CATEGORY FILTER BAR */}
-      <section id="catalog-filter" className="sticky top-20 z-30 bg-[#FAF8F5]/90 backdrop-blur-md py-4 px-8 md:px-14 border-b border-black/10">
+      <section id="catalog-filter" className="sticky top-20 z-30 bg-[#F8FAFC]/95 backdrop-blur-md py-4 px-8 md:px-14 border-b border-slate-200">
         <div className="max-w-[100rem] mx-auto flex items-center justify-between gap-4 overflow-x-auto hide-scrollbar">
           
           <div className="flex items-center gap-2 shrink-0">
-            <span className="text-xs uppercase tracking-widest text-[var(--color-fmrg-muted)] font-semibold mr-2 hidden sm:inline">
+            <span className="text-xs uppercase tracking-widest text-slate-500 font-semibold mr-2 hidden sm:inline">
               Filter Range:
             </span>
             <button
               onClick={() => setSelectedCategory("all")}
               className={`px-4 py-2 rounded-full text-xs uppercase tracking-wider font-semibold transition-all ${
                 selectedCategory === "all"
-                  ? "bg-[#7C4A27] text-white shadow-md font-semibold"
-                  : "bg-white/80 text-gray-700 hover:bg-gray-100 border border-black/10"
+                  ? "bg-blue-700 text-white shadow-md font-semibold"
+                  : "bg-white text-slate-700 hover:bg-slate-100 border border-slate-200"
               }`}
             >
               All Ranges ({products.length})
@@ -661,11 +688,11 @@ export default function SchoolUniforms() {
                   onClick={() => setSelectedCategory(c.id)}
                   className={`px-3.5 py-1.5 rounded-full text-xs uppercase tracking-wider transition-all whitespace-nowrap shrink-0 flex items-center gap-1.5 ${
                     active
-                      ? "bg-[#7C4A27] text-white shadow-md font-semibold"
-                      : "bg-white/70 text-gray-600 hover:bg-white hover:text-black border border-black/5"
+                      ? "bg-blue-700 text-white shadow-md font-semibold"
+                      : "bg-white text-slate-600 hover:bg-slate-100 hover:text-slate-900 border border-slate-200"
                   }`}
                 >
-                  <span className={`w-1.5 h-1.5 rounded-full ${active ? "bg-amber-300" : "bg-gray-400"}`}></span>
+                  <span className={`w-1.5 h-1.5 rounded-full ${active ? "bg-amber-400" : "bg-slate-300"}`}></span>
                   {c.title}
                 </button>
               );
@@ -676,33 +703,33 @@ export default function SchoolUniforms() {
       </section>
 
 
-      {/* 4. PRODUCT LISTING WITH LOOKBOOK DETAILS */}
+      {/* 4. PRODUCT LISTING WITH FULL IMAGE VIEW (object-contain, exact ratio) */}
       <div className="max-w-[100rem] mx-auto pt-20 pb-32 px-8 md:px-14">
         
         {/* Active Range Notice */}
         {selectedCategory !== "all" && (
-          <div className="mb-16 p-6 rounded-xl bg-[#FAF5EE] border border-[#7C4A27]/20 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="mb-16 p-6 rounded-2xl bg-blue-50/70 border border-blue-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
-              <span className="text-xs uppercase tracking-widest font-semibold text-[#7C4A27] block mb-1">
+              <span className="text-xs uppercase tracking-widest font-semibold text-blue-700 block mb-1">
                 Currently Viewing Range:
               </span>
-              <h3 className="font-fmrg-serif text-2xl text-[var(--color-fmrg-text)]">
+              <h3 className="font-fmrg-serif text-2xl text-slate-900">
                 {lookBookCategories.find(c => c.id === selectedCategory)?.title}
               </h3>
-              <p className="text-sm text-gray-600 mt-1">
-                What it covers: <strong className="text-black">{lookBookCategories.find(c => c.id === selectedCategory)?.covers}</strong>
+              <p className="text-sm text-slate-600 mt-1">
+                What it covers: <strong className="text-slate-900">{lookBookCategories.find(c => c.id === selectedCategory)?.covers}</strong>
               </p>
             </div>
             <button
               onClick={() => setSelectedCategory("all")}
-              className="text-xs uppercase tracking-wider font-semibold text-[#7C4A27] hover:underline self-start sm:self-center"
+              className="text-xs uppercase tracking-wider font-semibold text-blue-700 hover:underline self-start sm:self-center"
             >
               Clear Filter (View All) ✕
             </button>
           </div>
         )}
 
-        <div className="flex flex-col gap-28 md:gap-40">
+        <div className="flex flex-col gap-28 md:gap-36">
           {filteredProducts.map((p, i) => {
             const isEven = i % 2 === 0;
             return (
@@ -716,45 +743,55 @@ export default function SchoolUniforms() {
                   
                   {/* Category Pill Tag */}
                   <div className="product-reveal flex items-center gap-3 mb-4">
-                    <span className="px-3 py-1 rounded-full text-[11px] uppercase tracking-wider font-semibold bg-[#7C4A27]/10 text-[#7C4A27] border border-[#7C4A27]/25">
+                    <span className="px-3 py-1 rounded-full text-[11px] uppercase tracking-wider font-semibold bg-blue-100 text-blue-800 border border-blue-200">
                       Lookbook: {p.categoryTitle}
                     </span>
-                    <span className="text-xs text-gray-400">•</span>
-                    <span className="text-xs uppercase tracking-wider text-gray-500 font-mono">
+                    <span className="text-xs text-slate-400">•</span>
+                    <span className="text-xs uppercase tracking-wider text-slate-500 font-mono">
                       {p.categoryCover}
                     </span>
                   </div>
 
-                  <h2 className="product-title font-fmrg-serif text-4xl md:text-6xl mb-6 leading-tight">
+                  <h2 className="product-title font-fmrg-serif text-3xl md:text-5xl mb-5 leading-tight text-slate-900">
                     <SplitText text={p.title} />
                   </h2>
                   
-                  <div className="product-reveal mb-6 pl-5 border-l-2 border-[#7C4A27] bg-[#FAF5EE] py-3 pr-4 rounded-r-lg">
-                    <p className="font-fmrg-serif text-xl md:text-2xl text-[#3B2212] italic leading-snug">
+                  <div className="product-reveal mb-6 pl-5 border-l-2 border-blue-600 bg-blue-50/60 py-3 pr-4 rounded-r-lg">
+                    <p className="font-fmrg-serif text-lg md:text-2xl text-slate-800 italic leading-snug">
                       "{p.quote}"
                     </p>
                   </div>
                   
-                  <p className="product-reveal font-fmrg-sans text-lg text-gray-600 leading-relaxed max-w-2xl mb-6">
+                  <p className="product-reveal font-fmrg-sans text-base md:text-lg text-slate-600 leading-relaxed max-w-2xl mb-6">
                     {p.desc}
                   </p>
 
                   {/* Craftsmanship Specs */}
-                  <div className="product-reveal flex items-center gap-2 pt-4 border-t border-black/10">
-                    <span className="text-xs uppercase tracking-wider text-[var(--color-fmrg-accent)] font-semibold">Specifications:</span>
-                    <span className="text-xs text-gray-500 font-sans">{p.details}</span>
+                  <div className="product-reveal flex flex-col sm:flex-row sm:items-center gap-2 pt-4 border-t border-slate-200 mb-6">
+                    <span className="text-xs uppercase tracking-wider text-blue-700 font-bold shrink-0">Specifications:</span>
+                    <span className="text-xs text-slate-600 font-sans">{p.details}</span>
+                  </div>
+
+                  <div className="product-reveal flex items-center gap-4">
+                    <Link
+                      href="/contact"
+                      className="px-6 py-2.5 rounded-full bg-blue-700 hover:bg-blue-600 text-white font-fmrg-sans text-xs uppercase tracking-wider font-semibold transition-all shadow-md inline-flex items-center gap-2"
+                    >
+                      <span>Request School Sample</span>
+                      <span>→</span>
+                    </Link>
                   </div>
 
                 </div>
 
-                {/* Image Content */}
-                <div className="w-full lg:w-2/5 aspect-[4/5] relative overflow-hidden bg-gray-200 rounded-sm shadow-2xl group">
+                {/* Image Content (100% Fully Shown with object-contain, No Heads Cropped) */}
+                <div className="w-full lg:w-5/12 aspect-[3/4] md:aspect-[4/5] relative overflow-hidden bg-white rounded-2xl shadow-xl border border-slate-200 p-4 flex items-center justify-center group">
                   <img 
                     src={p.img} 
                     alt={p.title} 
-                    className="product-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                    className="product-image w-full h-full object-contain filter drop-shadow-md transition-transform duration-700 group-hover:scale-105" 
                   />
-                  <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-white text-[11px] uppercase tracking-wider border border-white/15">
+                  <div className="absolute top-4 right-4 bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded-full text-white text-[11px] uppercase tracking-wider border border-white/20">
                     {p.categoryCover}
                   </div>
                 </div>
@@ -764,22 +801,22 @@ export default function SchoolUniforms() {
           })}
         </div>
 
-        {/* Footer Contact Callout */}
-        <div className="mt-32 p-12 md:p-16 rounded-2xl bg-[#341B0D] border border-[#7C4A27]/40 text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl">
+        {/* Footer Contact Callout (Oxford Collegiate Navy & Varsity Gold) */}
+        <div className="mt-32 p-12 md:p-16 rounded-2xl bg-[#0F172A] border border-blue-900/60 text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl">
           <div>
-            <span className="text-xs uppercase tracking-[0.2em] text-amber-300 font-semibold block mb-2 font-mono">
+            <span className="text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold block mb-2 font-mono">
               Institutional Inquiries & Samples
             </span>
-            <h3 className="font-fmrg-serif text-3xl md:text-5xl text-amber-50">
+            <h3 className="font-fmrg-serif text-3xl md:text-5xl text-white">
               Equip Your School With 5th Avenue.
             </h3>
-            <p className="text-amber-100/80 mt-2 max-w-xl text-base">
+            <p className="text-slate-300 mt-2 max-w-xl text-base">
               Custom embroidery, Pantone fabric matching, and bulk institutional sizing across all 9 Look Book categories.
             </p>
           </div>
           <Link
             href="/contact"
-            className="px-8 py-4 bg-[#7C4A27] hover:bg-[#8F562E] text-white rounded-full font-fmrg-sans text-xs uppercase tracking-widest font-semibold transition-all shrink-0 shadow-lg"
+            className="px-8 py-4 bg-amber-400 hover:bg-amber-300 text-slate-950 rounded-full font-fmrg-sans text-xs uppercase tracking-widest font-bold transition-all shrink-0 shadow-xl"
           >
             Request Institutional Catalog →
           </Link>

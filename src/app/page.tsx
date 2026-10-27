@@ -335,11 +335,11 @@ export default function Home() {
               key={idx} 
               className="w-[74vw] sm:w-[48vw] md:w-[30vw] lg:w-[24vw] h-full flex flex-col shrink-0 group select-none cursor-pointer"
             >
-              <div className="w-full h-[76%] mb-3 flex items-center justify-center overflow-hidden relative rounded-sm border border-white/15 shadow-2xl bg-black/40 backdrop-blur-xs transition-all duration-500 group-hover:border-white/40 group-hover:shadow-[0_25px_50px_rgba(0,0,0,0.45)]">
+              <div className="w-full h-[76%] mb-3 flex items-center justify-center overflow-hidden relative rounded-xl border border-white/15 shadow-2xl bg-black/50 backdrop-blur-md transition-all duration-500 group-hover:border-white/40 group-hover:shadow-[0_25px_50px_rgba(0,0,0,0.45)] p-2">
                 <img 
                   src={prod.img} 
                   alt={prod.title} 
-                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 opacity-90 group-hover:opacity-100" 
+                  className="w-full h-full object-contain transition-transform duration-700 ease-out group-hover:scale-105" 
                 />
                 
                 {/* Specific colored category badge */}
@@ -420,9 +420,13 @@ export default function Home() {
       <section className="split-grid-section px-8 md:px-12 pb-32 max-w-[100rem] mx-auto pt-48 overflow-hidden bg-[var(--color-fmrg-bg)]">
         <div className="superstar-entry grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-32 items-start">
           
-          <div className="relative h-[80vh] w-full overflow-hidden bg-gray-200">
-             <div className="split-image absolute -inset-y-[20%] inset-x-0 w-full h-[140%] bg-[var(--color-fmrg-text)] flex items-center justify-center overflow-hidden">
-                <img src="/images/media_1789212528658.webp" className="w-full h-full object-cover opacity-80" alt="Cinematic presentation" />
+          <div className="relative h-[80vh] w-full overflow-hidden rounded-xl bg-[#FAF8F5] border border-black/10 shadow-2xl flex items-center justify-center p-4">
+             <div className="split-image relative w-full h-full flex items-center justify-center overflow-hidden">
+                <img 
+                  src="/images/products/senior_earthy_waistcoat_skirt.jpeg" 
+                  className="w-full h-full object-contain transition-transform duration-700 ease-out" 
+                  alt="5th Avenue Uniform Excellence" 
+                />
              </div>
           </div>
 
